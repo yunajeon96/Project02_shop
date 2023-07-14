@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+ul,li,ol{list-style:none;margin:0; padding:0;}
+
+
+
+#wrap{width:100%;height:600px; background-image:url(../img/macaron.jpeg);background-repeat:no-repeat;background-position:center;background-size:cover;margin:0 auto;}
+
+#wrap .header{width:1440px;position:relative;margin:0 auto;}
+
+.header .login{position:absolute;top:0; right:20px;}
+.header i{font-size:25px;opacity:0.5;color:gray;cursor:pointer;}
+.header nav{width:1440px;height:200px;margin:0 auto;}
+.header nav ul{display:flex;flex-flow:row wrap;justify-content:space-between;align-items:center;}
+.header nav li{width:205px; height:100px;line-height:100px;font-family: 'Nanum Gothic', sans-serif;font-weight:800;text-align:center;padding:50px 0;}
+.header nav li a{text-decoration:none;color:aliceblue;font-size:30px;}
+
+
+
+#section_a{width:1440px;height:1100px;margin:0 auto; background:beige;position:relative;}
+#section_a h1{font-size:50px; text-align:right;padding:70px 10px;}
+#section_a .seca{width:30%;height:700px;background:plum;position:absolute;margin:10px 0;}
+#section_a .seca:nth-of-type(1){top:80px; left:0 }
+#section_a .seca:nth-of-type(2){top:230px; left:500px;}
+#section_a .seca:nth-of-type(3){top:360px; left:1000px;}
+#section_a .seca p{background:purple; font-size:30px; width:100%;height:100px;}
+
+
+#section_b{width:100%; height:900px;background:yellowgreen;}
+#section_b .sect_b{width:1440px; height:900px;background:yellow;margin:0 auto;display:flex;flex-flow:row wrap;justify-content:space-between;}
+.sect_b h2{font-size:50px;text-align:center; margin:30px 420px 0;}
+.sect_b h5{font-size:25px; text-align:center;margin:0 470px;}
+.sect_b .secb{display:flex;flex-flow:column wrap;align-items:center;}
+.sect_b .secb img{width:270px; height:380px;background-color:aquamarine;margin:5px;}
+.sect_b .secb p{text-align:right;}
+.sect_b .secb a{text-decoration:none;}
+
+
+
+#section_c{width:1440px; height:990px;margin:0 auto;}
+#section_c h2{text-align:right;font-size:60px;padding:80px 30px 30px;}
+#section_c .secc{height:800px;background-image:url(../img/bodyspray.jpg);background-size:cover;background-position:center;position:relative;}
+.secc_text{width:70%; height:70%;background-color:rgba(137,138,126,0.6);text-align:right;position:absolute; top:100px;right:20px;}
+.secc_text p{font-size:50px;padding:250px 50px 0;}
+.secc_text h6{font-size:30px; padding:10px 50px 0;}
+.secc_text button{background:black; border:none; padding:8px 15px; border-radius:6px; margin:30px 50px 0;}
+.secc_text button a{text-align:center;text-decoration:none; color:white;font-family: 'Nanum Gothic', sans-serif;font-weight:700;}
+.secc_text button a:hover{color:#80bfb5;}
+
+#section_d{width:1440px; height:500px;margin:0 auto;}
+#section_d img{width:900px; height:400px;float:left; margin:40px 0px;}
+#section_d h2{font-size:50px;text-align:center; padding:150px 0 10px;}
+#section_d p{font-size:25px;text-align:center;margin:30px 0 10px;}
+#section_d button{background:rgba(137,138,126,0.3); border:none; border-radius:6px;padding:15px 30px;margin:25px 0 0 200px;}
+
+
+footer{width:100%; height:350px;background:beige;}
+#foot{width:1440px;height:350px; margin:0 auto;}
+#footer_a{float:left;}
+#footer_a ul li{float:left;font-size:17px;margin:40px 20px;font-family: 'Nanum Gothic', sans-serif;font-weight:700;}
+#footer_a ul li:after{content:"|";font-size:small;margin-left:25px;color:black;}
+#footer_a ul li a{text-decoration:none;color:#333;}
+/* .footer_right{float:right; margin:-190px 50px 0 0;}
+.footer_right h6{font-size:18px;} */
+.footer_left img{margin-top:-30px;}
+.footer_left p{font-size:13px;margin:3px 10px 0;}
+.footer_left p:nth-of-type(4){font-weight:bold;margin-top:20px;margin-bottom:10px;}
+
+#footer_b{float:right;background:rgba(137,138,126,0.4);}
+#footer_b>p{font-size:28px;font-family: 'Nanum Gothic', sans-serif;font-weight:700;padding:50px 30px 15px;}
+#footer_b>input{background:rgba(137,138,126,0.7);border:none;padding:20px 180px;margin:5px 30px;}
+#checkbox p{font-size:13px;margin:10px 30px;}
+#footer_b button{width:180px; height:40px;background:rgba(137,138,126,0.7);border:none;border-radius:5px;margin:5px 30px;}
+#footer_b button:nth-of-type(2){margin-left:120px;}
+
+
+
+
+
+
+
