@@ -40,7 +40,7 @@ ul,li,ol{list-style:none;margin:0; padding:0;}
 
 #section_c{width:1440px; height:990px;margin:0 auto;}
 #section_c h2{text-align:right;font-size:60px;padding:80px 30px 30px;}
-#section_c .secc{height:800px;background-image:url(../img/bodyspray.jpg);background-size:cover;background-position:center;position:relative;}
+#section_c .secc{height:800px;background-image:url(../img/secc.jpg);background-size:cover;background-position:center;position:relative;}
 .secc_text{width:70%; height:70%;background-color:rgba(137,138,126,0.6);text-align:right;position:absolute; top:100px;right:20px;}
 .secc_text p{font-size:50px;padding:250px 50px 0;}
 .secc_text h6{font-size:30px; padding:10px 50px 0;}
@@ -49,7 +49,7 @@ ul,li,ol{list-style:none;margin:0; padding:0;}
 .secc_text button a:hover{color:#80bfb5;}
 
 #section_d{width:1440px; height:500px;margin:0 auto;}
-#section_d img{width:900px; height:400px;float:left; margin:40px 0px;}
+#section_d img{width:900px; height:400px;float:left; margin:40px 0px;overflow:hidden;}
 #section_d h2{font-size:50px;text-align:center; padding:150px 0 10px;}
 #section_d p{font-size:25px;text-align:center;margin:30px 0 10px;}
 #section_d button{background:rgba(137,138,126,0.3); border:none; border-radius:6px;padding:15px 30px;margin:25px 0 0 200px;}
@@ -68,11 +68,13 @@ footer{width:100%; height:350px;background:beige;}
 .footer_left p:nth-of-type(4){font-weight:bold;margin-top:20px;margin-bottom:10px;}
 
 #footer_b{float:right;background:rgba(137,138,126,0.4);}
-#footer_b>p{font-size:28px;font-family: 'Nanum Gothic', sans-serif;font-weight:700;padding:50px 30px 15px;}
-#footer_b>input{background:rgba(137,138,126,0.7);border:none;padding:20px 180px;margin:5px 30px;}
-#checkbox p{font-size:13px;margin:10px 30px;}
-#footer_b button{width:180px; height:40px;background:rgba(137,138,126,0.7);border:none;border-radius:5px;margin:5px 30px;}
-#footer_b button:nth-of-type(2){margin-left:120px;}
+#footer_b>p{font-size:28px;font-family: 'Nanum Gothic', sans-serif;font-weight:700;margin:40px 60px 0;}
+#footer_b>input{width:400px; height:50px;background:rgba(137,138,126,0.5);border:none;margin:40px 60px 0;}
+#footer_b>input:nth-of-type(2){margin-top:10px}
+#checkbox p{font-size:13px;margin:15px 60px 0;}
+#footer_b button{width:180px; height:40px;background:beige;border:none;border-radius:5px;margin:15px 30px 10px 60px;}
+#footer_b button:nth-of-type(2){margin-left:6px;}
+
 
 
 
