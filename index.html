@@ -21,12 +21,6 @@
 </head>
 <body>
 <div id="wrap">
-    <div class="video">
-        <video autoplay muted loop>
-            <source src="img/LUSH Bath Bomb _ Love Car ( Valentine Exclusive ).mp4" type="video/mp4" ;>
-        </video>
-    </div>
-
     <div class="header">
         <div class="login">login</div>
         <i class="fas fa-bars"></i>
@@ -82,6 +76,11 @@
                 </ul>
             </div>
         </nav>
+    </div>
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="img/LUSH Bath Bomb _ Love Car ( Valentine Exclusive ).mp4" type="video/mp4" ;>
+        </video>
     </div>
 </div>
 
@@ -175,9 +174,6 @@
             <p>개인정보처리방침</p>
             <p>2023 LUSHKOREA All Rights Reserved.</p>
         </div>
-        <!-- <div class="footer_right">
-            <h6>Korea | 한국어 | won</h6>
-        </div> -->
     </div>
 
     <div id="footer_b">
@@ -197,6 +193,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
+
+    $(document).ready(function(){
+        $('i').click(function(){
+            $('.main_list').toggleClass("toggle");
+        });
+    });
    
     let imgs=["img/sec21.png","img/sec22.png","img/sec23.png","img/sec24.png","img/sec25.png"]
     let hover=["img/sec21_1.png","img/sec21_2.png","img/sec21_3.png","img/sec21_4.png","img/sec21_5.png"];
