@@ -17,6 +17,7 @@
 
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/common.css">
 
 </head>
 <body>
@@ -110,29 +111,18 @@
 
 
 <div id="section_b">
-    <div class="sect_b">
+    <div class="slidewrap">
         <h2>LUSH CONTAINS TREND</h2>
         <h5>러쉬는 당신을 늘 싱그럽게 만들어줄거예요</h5>
-        <div class="secb">
-            <img src="img/sec21.png" alt="img1">
-            <p><a href="#">BODY></a></p>
-        </div>
-        <div class="secb">
-            <img src="img/sec22.png" alt="img2">
-            <p><a href="#">HAIR></a></p>
-        </div>
-        <div class="secb">
-            <img src="img/sec23.png" alt="img3">
-            <p><a href="#">FACE></a></p>
-        </div>
-        <div class="secb">
-            <img src="img/sec24.png" alt="img4">
-            <p><a href="#">PURFUME></a></p>
-        </div>
-        <div class="secb">
-            <img src="img/sec25.png" alt="img5">
-            <p><a href="#">CANDLE></a></p>
-        </div>
+        <ul class="slide">
+            <li><img src="img/sec21.png" alt="img1"></li>
+            <li><img src="img/sec22.png" alt="img2"></li>
+            <li><img src="img/sec23.png" alt="img3"></li>
+            <li><img src="img/sec24.png" alt="img4"></li>
+            <li><img src="img/sec25.png" alt="img5"></li>
+        </ul>
+        <span class="prev">&lt;</span>
+        <span class="next">&gt;</span>
     </div>
 </div>
 
@@ -204,16 +194,27 @@
     let imgs=["img/sec21.png","img/sec22.png","img/sec23.png","img/sec24.png","img/sec25.png"]
     let hover=["img/sec21_1.png","img/sec21_2.png","img/sec21_3.png","img/sec21_4.png","img/sec21_5.png"];
 
-    $(".secb img").hover(function(){
-        let i=$(this).parent().index()-2;
+    $(".slide img").hover(function(){
+        let i=$(this).parent().index();
         console.log(i);
         $(this).attr("src",hover[i])
     },function(){
-        let i=$(this).parent().index()-2;
+        let i=$(this).parent().index();
         $(this).attr("src",imgs[i])
     });
 
-
+    
+    $('.prev').click(function(){
+        $('.slide li:last').prependTo('.slide');
+        $('.slide').css('margin-left','-360px');
+        $('.slide').stop().animate({marginLeft:0},600);
+    });
+    $('.next').click(function(){
+        $('.slide').stop().animate({marginLeft:'-360px'},600,function(){
+            $('.slide li:first').appendTo('.slide');
+            $('.slide').css({marginLeft:0});
+        })   
+    })
 
    </script>
 
