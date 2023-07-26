@@ -143,7 +143,7 @@
     <img src="img/secd.jpg" alt="d">     
     <h2>MEET LUSH</h2>
     <p>가장 가까운 매장에서<br>러쉬를 만나보세요!</p>
-    <button>자세히 보기-></button>
+    <button>자세히 보기</button>
  </div>
 
 <footer>
@@ -165,6 +165,7 @@
             <p>개인정보처리방침</p>
             <p>2023 LUSHKOREA All Rights Reserved.</p>
         </div>
+     
     </div>
 
     <div id="footer_b">
@@ -207,12 +208,12 @@
     $('.prev').click(function(){
         $('.slide li:last').prependTo('.slide');
         $('.slide').css('margin-left','-360px');
-        $('.slide').stop().animate({marginLeft:0},600);
+        $('.slide').stop().animate({marginLeft:0},200);
     });
     $('.next').click(function(){
-        $('.slide').stop().animate({marginLeft:'-360px'},600,function(){
+        $('.slide').stop().animate({marginLeft:'-360px'},200,function(){
             $('.slide li:first').appendTo('.slide');
-            $('.slide').css({marginLeft:0});
+            $('.slide').css({marginLeft:0},200);
         })   
     })
 
