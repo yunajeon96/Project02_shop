@@ -182,7 +182,7 @@
 
 
 
-@media screen and (min-width:601px) and (max-width:1399px) {
+@media screen and (min-width:601px) and (max-width:1439px) {
     #wrap {
         width: 100%
     }
@@ -387,6 +387,7 @@
         text-decoration: none;
         color: white;
     }
+    .header .login a:hover{color:#ce96fb;}
 
     .header i {
         font-size: 23px;
@@ -491,7 +492,7 @@
 
     #footer_a ul li {
         float: left;
-        margin: 80px 20px;
+        margin: 60px 20px;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
     }
@@ -507,20 +508,23 @@
         text-decoration: none;
         color: #333;
         font-size: 17px;
+        
+    }
+    #footer_a ul li a:hover{color:#fff;font-weight:900;
     }
 
     .footer_left img {
-        margin: 30px 20px;
+        margin: 30px 20px 40px;
     }
 
     .footer_left p {
-        font-size: 13px;
+        font-size: 14px;
         margin: 10px 15px 0;
     }
 
     .footer_left p:nth-of-type(4) {
         font-weight: bold;
-        margin-top: 20px;
+        margin-top: 25px;
         margin-bottom: 10px;
     }
 
@@ -534,7 +538,7 @@
         font-size: 28px;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
-        margin: 80px 60px 0;
+        margin: 70px 60px 0;
     }
 
     #footer_b>input {
