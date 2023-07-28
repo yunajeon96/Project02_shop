@@ -192,31 +192,56 @@
         });
     });
    
-    let imgs=["img/sec21.png","img/sec22.png","img/sec23.png","img/sec24.png","img/sec25.png"]
-    let hover=["img/sec21_1.png","img/sec21_2.png","img/sec21_3.png","img/sec21_4.png","img/sec21_5.png"];
+    // let imgs=["img/sec21.png","img/sec22.png","img/sec23.png","img/sec24.png","img/sec25.png"]
+    // let hover=["img/sec21_1.png","img/sec21_2.png","img/sec21_3.png","img/sec21_4.png","img/sec21_5.png"];
 
-    $(".slide img").hover(function(){
-        let i=$(this).parent().index();
-        console.log(i);
-        $(this).attr("src",hover[i])
-    },function(){
-        let i=$(this).parent().index();
-        $(this).attr("src",imgs[i])
-    });
+    // $(".slide img").hover(function(){
+    //     let i=$(this).parent().index();
+    //     console.log(i);
+    //     $(this).attr("src",hover[i])
+    // },function(){
+    //     let i=$(this).parent().index();
+    //     $(this).attr("src",imgs[i])
+    // });
 
-    
-    $('.prev').click(function(){
+    if (window.matchMedia("(min-width: 1440px)").matches) { 
+
+        $('.prev').click(function(){
         $('.slide li:last').prependTo('.slide');
-        $('.slide').css('margin-left','-360px');
-        $('.slide').stop().animate({marginLeft:0},200);
+        $('.slide').css('margin-left',"-360px");
+        $('.slide').stop().animate({marginLeft:0},500);
     });
     $('.next').click(function(){
-        $('.slide').stop().animate({marginLeft:'-360px'},200,function(){
+        $('.slide').stop().animate({marginLeft:"-360px"},500,function(){
             $('.slide li:first').appendTo('.slide');
-            $('.slide').css({marginLeft:0},200);
+            $('.slide').css({marginLeft:0});
         })   
     })
 
+} else { 
+
+
+    let w=$('.slide li:first').width()
+console.log(w)
+    $('.prev').click(function(){
+        $('.slide li:last').prependTo('.slide');
+        $('.slide').css('margin-left',-w);
+        $('.slide').stop().animate({marginLeft:0},500);
+    });
+    $('.next').click(function(){
+        $('.slide').stop().animate({marginLeft:-w},500,function(){
+            $('.slide li:first').appendTo('.slide');
+            $('.slide').css({marginLeft:0});
+        })   
+    })
+
+}
+ 
+
+
+    $(function(){
+        ("#section_a>h1").fadeIn(2000);
+    });
    </script>
 
 </body>
