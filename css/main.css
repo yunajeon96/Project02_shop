@@ -91,7 +91,7 @@ ol {
         width: 80%;
         text-align: left;
         background: rgba(255, 255, 255, 1);
-        margin: 110% 0 0;
+        margin: 120% 0 0;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 600;
         padding: 4% 1%;
@@ -220,14 +220,15 @@ ol {
 
     #section_d {
         width: 100%;
-        height: 750px;
+        height:auto;
         margin: 0 auto;
+        overflow:hidden;
     }
 
     #section_d img {
         width: 100%;
         height: auto;
-        margin: 220px 0 0;
+        margin: 70% 0 0;
         overflow: hidden;
     }
 
@@ -249,7 +250,7 @@ ol {
         border-radius: 6px;
         padding: 2% 3%;
         margin-left: 41%;
-        margin-bottom:2%;
+        margin-bottom:15%;
         font-size: 2.5vw;
         color: white
     }

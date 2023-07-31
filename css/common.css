@@ -105,15 +105,16 @@
 
     .sub_list li a {
         color: #fff;
-        font-size: 1vw;
+        font-size: 2.1vw;
         font-family: 'Nanum Gothic', sans-serif;
        
     }
     
     
-    .sub_list li:hover {
-        text-decoration: underline;
-        text-decoration-color:#ce96fb;
+    .sub_list li a:hover {
+        /* text-decoration: underline;
+        text-decoration-color:#ce96fb; */
+        color:#ce96fb;
 
     }
 
@@ -141,7 +142,7 @@
 
     #footer_a ul li {
         float: left;
-        margin:5%;
+        margin:4%;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
     }
