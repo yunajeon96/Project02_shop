@@ -540,7 +540,11 @@ ol {
         padding: 80px 10px;
         font-weight:700;
         letter-spacing:3px;
-        display:none;
+    }
+    #section_a .s1{
+        transform:translateY(-10vh);
+        transition:all 3s;
+        opacity:0;
     }
 
     #section_a .seca {
@@ -580,6 +584,10 @@ ol {
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
         padding: 20px 0 10px;
+        transform:translateY(7vh);
+        transition:all 3s;
+        opacity:0;
+      
     }
 
     .seca h6 {
@@ -588,7 +596,10 @@ ol {
         color: #333;
         width: 300px;
         font-weight:500;
-    }
+        transform:translateY(7vh);
+        transition:all 3s;
+        opacity:0;
+        }
 
 
 
