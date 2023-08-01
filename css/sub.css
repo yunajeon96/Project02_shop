@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}/* <메인폰트> */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SUITE-Regular';
+}
+
+ul,li,ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sub_show{width:1440px;
+          height:900px;
+          background-color:gray;
+          margin:0 auto;}
+
+
+
+
+
+
+#sub_buy{width:1440px;
+         height:900px;
+         background-color:wheat;
+        margin:0 auto;}
+
+
+
+
+        
+
+
+#sub_review{width:1440px;
+        height:900px;
+         background-color:mistyrose;
+        margin:0 auto;}
+

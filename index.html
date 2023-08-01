@@ -257,17 +257,33 @@
 
             $(window).scroll(function () {
                 let ws = $(this).scrollTop();
-
                 let a = $("#section_a").offset().top;
-
+                let b=$("#section_b").offset().top;
+                let c=$("#section_c").offset().top;
+                console.log(c);
+                let d=$("#section_d").offset().top;
+                console.log(d);
+                  
                 if (ws >= a - 700) {
                     $('.s1').css("transform", "translateY(0px)").css("opacity", "1");
                 }
 
-                if (ws >= a + -150) {
+                if (ws >= a -700) {
                     $('.seca p').css("transform", "translateY(0px)").css("opacity", "1");
 
                     $('.seca h6').css("transform", "translateY(0px)").css("opacity", "1");
+                }
+
+                if (ws >= b - 1000) {
+                    $('.slidewrap h2,h5').css("transform", "translateX(0px)").css("opacity", "1");
+                }
+
+                if (ws >= c - 2000) {
+                    $('.secc_text').css("transform", "translateX(0px)").css("opacity", "1");
+                }
+
+                if (ws >= d - 3700) {
+                    $('#section_d h2').css("transform", "translateY(0px)").css("opacity", "1");
                 }
             })
         })

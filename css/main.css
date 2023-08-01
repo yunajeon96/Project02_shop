@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 
+
 @font-face {
     font-family: 'SUITE-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
@@ -361,7 +362,7 @@ ol {
 
     #section_b .slidewrap {width:80%;height: 800px;margin:0 auto;position:relative;overflow:hidden;}
 
-    .slidewrap h2 {font-size: 40px;text-align: center;margin-top: 150px;}
+    .slidewrap h2 {font-size: 40px;text-align: center;margin-top: 180px;}
 
     .slidewrap h5 {font-size: 21px;text-align:center;margin-top:3%;}
 
@@ -540,6 +541,7 @@ ol {
         padding: 80px 10px;
         font-weight:700;
         letter-spacing:3px;
+       
     }
     #section_a .s1{
         transform:translateY(-10vh);
@@ -617,21 +619,28 @@ ol {
         margin:50px auto;
         position:relative;
         overflow:hidden;
+        text-align:center;
        
     }
 
     .slidewrap h2 {
-        font-size: 50px;
-        text-align: center;
-        margin-top: 150px;
+        font-size: 45px;
+        margin-top: 180px;
         font-weight:900;
+        transform:translateX(-4vh);
+        transition:all 3s;
+        opacity:0;
+        font-family: 'Nanum Gothic', sans-serif;
      
     }
 
     .slidewrap h5 {
-        font-size: 25px;
+        font-size: 23px;
         font-weight:600;
-        margin:2% 35%;
+        margin:2% 0;
+        transform:translateX(-5vh);
+        transition:all 3s;
+        opacity:0;
     }
 
     .slidewrap .slide {
@@ -668,6 +677,9 @@ ol {
         position: absolute;
         top:150px;
         z-index: 3;
+        transform:translateX(-22vh);
+        transition:all 5s;
+        opacity:0;
     }
 
     .secc_text h2 {
@@ -675,6 +687,7 @@ ol {
         font-size: 60px;
         padding: 300px 0 0px;
         font-weight:900;
+        font-family: 'Nanum Gothic', sans-serif;
     }
 
     .secc_text p {
@@ -749,12 +762,16 @@ ol {
     #section_d h2 {
         font-size: 55px;
         padding-top: 20%;
+        font-family: 'Nanum Gothic', sans-serif;
+        transform:translateY(-15vh);
+        transition:all 5s;
+        opacity:1;
     }
 
     #section_d p {
         font-size: 20px;
         margin: 30px 0;
-        
+       
     }
 
     #section_d button {
