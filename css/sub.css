@@ -12,6 +12,8 @@
     margin: 0;
     padding: 0;
     font-family: 'SUITE-Regular';
+    box-sizing:border-box;
+    text-decoration:none;
 }
 
 ul,li,ol {
@@ -21,9 +23,73 @@ ul,li,ol {
 }
 
 #sub_show{width:1440px;
-          height:900px;
-          background-color:gray;
-          margin:0 auto;}
+          height:93vh;
+          background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+          margin:0 auto;
+          box-sizing:border-box;
+          text-align:center;
+          overflow:hidden;
+          position:relative;}
+
+ .circle{border-radius:50%; background-color:#29324A;
+         width:1116px;height:120%;position:absolute;left:-550px;top:-100px;}
+
+
+ .left_menu{position:absolute;top:30%;left:3%;;width:25%;height:50%;}
+ .left_menu span{margin:5%;text-align:left;color:#ffd1ff;}
+ .left_menu>p{font-size:3em;font-weight:700;margin:15% 0 50%;color:#fff;}
+
+ .btn {
+    margin:0 25%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    width: 160px;
+    margin-top: 30px;
+    border: 1px solid #ffd1ff;
+    font-size:15px;
+    line-height: 54px;
+    text-align: center;
+    color: white;
+    -webkit-transition: color .4s;
+    transition: color .4s;
+    z-index:3;
+  }
+  .btn p{position:relative;z-index:3;letter-spacing:2px;}
+  
+  .btn span {
+    position: absolute;
+    /* z-index: -1; */
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color:#ffd1ff;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+  
+  .btn:hover {
+    color:#29324A;
+   
+  }
+  
+  .btn:hover span {
+    width: 350px;
+    height: 350px
+  }
+  
+
+          
+ .right_menu{position:absolute;top:10%;left:30%;width:1025px;height:80vh;overflow:hidden;}
+ .right_menu>h1{font-size:3vw;text-align:right;margin:4% 5% -6%;}
+ .wrap{display:flex;width:1440px;}
+ .right{width:360px;height:50vh;background-color:rgba(255,255,255,0.4); margin: 6% 1%;border-radius:38%;}
+ .right img{margin:10% 5% 0;}
+ .right p:nth-of-type(1){font-weight:900;font-size:1.3em;color:#070711;}
+ .right p:nth-of-type(2){font-size:0.8em;margin:5%;}
 
 
 
@@ -31,8 +97,8 @@ ul,li,ol {
 
 
 #sub_buy{width:1440px;
-         height:900px;
-         background-color:wheat;
+         height:93vh;
+         background-color:black;
         margin:0 auto;}
 
 
@@ -42,7 +108,7 @@ ul,li,ol {
 
 
 #sub_review{width:1440px;
-        height:900px;
+            height:93vh;
          background-color:mistyrose;
         margin:0 auto;}
 

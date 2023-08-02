@@ -27,27 +27,39 @@
         <span>02</span>
         <span>03</span>
         <p>Choose your Preference</p>
-        <button>next</button>
+        <a class="btn" href="#"><p>next</p><span></span></a>
     </div>
     <div class="right_menu">
-        <h1>BATH BOMB</h1>
-        <div class="right_a">
+       <h1>BATH BOMB</h1>
+       <div class="wrap">
+        <div class="right">
           <img src="img/sub/butterball.png" alt="1">
           <p>Butterball</p>
+          <p>따뜻하고 달콤한 바닐라 향기와 코코넛 버터가 가득한 배쓰밤</p>
           <button></button>
         </div>
 
-        <div class="right_b">
-            <img src="img/sub/sakura.png" alt="2">
-            <p>Butterball</p>
+        <div class="right">
+            <img src="img/sub/intergalactic.png" alt="2">
+            <p>intergalactic</p>
+            <p>상쾌한 페퍼민트와 포도씨 오일 조합이 환상적인  은하계 배쓰밤</p>
             <button></button>
           </div>
 
-          <div class="right_c">
-            <img src="img/sub/intergalactic.png" alt="3">
-            <p>Butterball</p>
+          <div class="right">
+            <img src= "img/sub/sakura.png"alt="3">
+            <p>sakura</p>
+            <p>절제되고 차분한 미모사와 자스민 오일이 가득한 배쓰밤</p>
             <button></button>
           </div>
+
+          <div class="right">
+            <img src="img/sub/peachy.png" alt="4">
+            <p>peachy</p>
+            <p>달콤하고 상큼한 복숭아 과일향이 가득 퍼지는 배쓰밤</p>
+            <button></button>
+          </div>
+        </div>  
     </div>
 
 
@@ -60,6 +72,42 @@
   <div id="sub_review">
     
   </div>
-    
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+  <script>
+    $(function () {
+      $('.btn')
+        .on('mouseenter', function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find('span').css({
+            top: relY,
+            left: relX
+          })
+        })
+        .on('mouseout', function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find('span').css({
+            top: relY,
+            left: relX
+          })
+        });
+    });
+
+   
+
+    $(function(){
+      $('.right:nth-of-last').prependTo('.right');
+      $('.right').css('margin-left',"-360px");
+      $('.right').stop().animate({marginLeft:0},500);
+    })
+  </script>  
 </body>
 </html>
