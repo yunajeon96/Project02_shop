@@ -36,28 +36,72 @@
           <img src="img/sub/butterball.png" alt="1">
           <p>Butterball</p>
           <p>따뜻하고 달콤한 바닐라 향기와 코코넛 버터가 가득한 배쓰밤</p>
-          <button></button>
+          <div class="btn1">
+            <p class="btn1Text"><a href="#">MORE?</a></p>
+            <div class="btn2">
+            <p class="btn2Text">Go!</p>
+            </div>
+          </div>
         </div>
 
         <div class="right">
             <img src="img/sub/intergalactic.png" alt="2">
-            <p>intergalactic</p>
+            <p>Intergalactic</p>
             <p>상쾌한 페퍼민트와 포도씨 오일 조합이 환상적인  은하계 배쓰밤</p>
-            <button></button>
+            <div class="btn1">
+              <p class="btn1Text"><a href="#">MORE?</a></p>
+              <div class="btn2">
+              <p class="btn2Text">Go!</p>
+              </div>
+            </div>
           </div>
 
           <div class="right">
             <img src= "img/sub/sakura.png"alt="3">
-            <p>sakura</p>
+            <p>Sakura</p>
             <p>절제되고 차분한 미모사와 자스민 오일이 가득한 배쓰밤</p>
-            <button></button>
+            <div class="btn1">
+              <p class="btn1Text"><a href="#">MORE?</a></p>
+              <div class="btn2">
+              <p class="btn2Text">Go!</p>
+              </div>
+            </div>
           </div>
 
           <div class="right">
             <img src="img/sub/peachy.png" alt="4">
-            <p>peachy</p>
-            <p>달콤하고 상큼한 복숭아 과일향이 가득 퍼지는 배쓰밤</p>
-            <button></button>
+            <p>Peachy</p>
+            <p>달콤하고 상큼한 복숭아 과일향이 가득 퍼지는 여름 배쓰밤</p>
+            <div class="btn1">
+              <p class="btn1Text"><a href="#">MORE?</a></p>
+              <div class="btn2">
+              <p class="btn2Text">Go!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <img src="img/sub/sex bomb.png" alt="5">
+            <p>Sex bomb</p>
+            <p>자스민, 일랑일랑, 클라리 세이지 오일이 듬뿍 들어가 감각적인 치유의 배쓰밤</p>
+            <div class="btn1">
+              <p class="btn1Text"><a href="#">MORE?</a></p>
+              <div class="btn2">
+              <p class="btn2Text">Go!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <img src="img/sub/big blue.png" alt="6">
+            <p>Big blue</p>
+            <p>아라메 해초와 레몬과 라벤더 오일의 블렌드로 편안한 향의 배쓰밤</p>
+            <div class="btn1">
+              <p class="btn1Text"><a href="#">MORE?</a></p>
+              <div class="btn2">
+              <p class="btn2Text">Go!</p>
+              </div>
+            </div>
           </div>
         </div>  
     </div>
@@ -104,9 +148,22 @@
    
 
     $(function(){
-      $('.right:nth-of-last').prependTo('.right');
-      $('.right').css('margin-left',"-360px");
-      $('.right').stop().animate({marginLeft:0},500);
+      var totalNum=$(".wrap>div").length;
+      var currentNum=1
+      $(".btn").click(function(){
+        currentNum++;
+        if(currentNum>totalNum){
+          currentNum=1;
+        }
+        $(".wrap >div:first").insertAfter(".wrap> div:last"); 
+      });
+      // $(".btn").click(function(){
+      //   currentNum--;
+      //   if(currentNum<1){
+      //     currentNum=totalNum;
+      //   }
+      //   $(".wrap >div:last").insertBefore(".vis> div:first");
+      // })
     })
   </script>  
 </body>

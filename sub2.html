@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub2</title>
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box;}
+        body {height:100%; overflow-y: hidden; font-size:10px;}
+        html {height:100%;}
+        body::-webkit-scrollbar {display: none;}
+        ul,li,ol {list-style:none;}
+        a {text-decoration:none; color:#555;}
+  
+        #wrap {width:100%; height:100%; position:relative;}
+        #wrap>.wrap_af {content:""; position:fixed; display:block; width:100%;
+          height:100%; background:rgba(0,0,0,0.5); top:0; left:0;z-index:20; }
+        /*오른쪽 버튼*/
+        #dot {width:80px; height:250px;  position:fixed; justify-content:center;
+          align-items:center; display:flex;
+          top:50%; right:0px; transform:translatey(-50%); z-index:100;}
+        #dot>ul {width:40px; height:220px;}
+        #dot li {width:20px; height:20px; position:relative;
+          display:block; margin:10px auto; border-radius:50%;
+          box-shadow:-0px 0px 5px rgba(255,255,255,0.1);}
+        #dot li a {background:rgba(255,255,255,0.7);
+          transition:all 0.3s ease-in-out;
+          top:0; left:0; width:100%; height:100%; outline:none; border-radius:50%;
+          background-color:#fff; background:rgba(255,255,255,0.5);
+          cursor:pointer; position:absolute;}
+        #dot ul .active {box-shadow:0 0 0 2px #f0a91b;}
+
+        #dot li:hover {opacity:1; cursor:pointer;}
+  
+        section{width:100%; height:100%; position:relative;}
+  
+        /*페이지*/
+        .page {width:100%; height:100%; position:relative; margin:0 auto; background:#f7f0e4;}
+        /*p0*/
+        #particles-js {width:100%; height:100%; position:relative; background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);}
+  
+  
+        /*바탕 포인트 컬러*/
+        .background {width:px; height:px; position:absolute; top:10%;}
+        .p01 {background:#555;}
+        .p02 {background:#d6130f;}
+        
+  
+        /*pf_bot*/
+        .pf_bot {width:100%; height:100%; padding:50px 0; position:relative;}
+  
+      </style>
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  
+      <script>
+        //js/dot.js
+        $(function(){
+          var dot = $("#dot ul li");
+          var contents = $(".page_wrap>.page");
+  
+          dot.click(function(e){
+            e.preventDefault();
+            var target = $(this);
+            var index = target.index();
+            var section = contents.eq(index);
+            var offset = section.offset().top;
+            $("html,body").animate({scrollTop:offset},600);
+          });
+  
+          $(window).scroll(function(){
+            var wScroll = $(this).scrollTop();
+  
+            if(wScroll >= contents.eq(0).offset().top){
+              dot.css({"background":"rgba(255,255,255,0.1)"});
+              dot.find("a").css({"background":"rgba(255,255,255,0.5)"});
+              dot.removeClass("active");
+              dot.eq(0).addClass("active");
+              dot.eq(0).find("a").css({"background":"#0cdaff"});
+            }
+            if(wScroll >= contents.eq(1).offset().top){
+              dot.css({"background":"rgba(0,0,0,0.7)"});
+              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
+              dot.removeClass("active");
+              dot.eq(1).addClass("active");
+              dot.eq(1).find("a").css({"background":"#0189ff"});
+            }
+            if(wScroll >= contents.eq(2).offset().top){
+              dot.removeClass("active");
+              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
+              dot.eq(2).addClass("active");
+              dot.eq(2).find("a").css({"background":"#f0a91b"});
+            }
+            if(wScroll >= contents.eq(3).offset().top){
+              dot.removeClass("active");
+              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
+              dot.eq(3).addClass("active");
+              dot.eq(3).find("a").css({"background":"#fff"});
+            }
+            if(wScroll >= contents.eq(4).offset().top){
+              dot.removeClass("active");
+              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
+              dot.eq(4).addClass("active");
+              dot.eq(4).find("a").css({"background":"#d6130f"});
+            }
+            if(wScroll >= contents.eq(5).offset().top){
+              dot.removeClass("active");
+              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
+              dot.eq(5).addClass("active");
+              dot.eq(5).find("a").css({"background":"#a0ef08"});
+            }
+            if(wScroll >= contents.eq(6).offset().top){
+              dot.removeClass("active");
+              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
+              dot.eq(6).addClass("active");
+              dot.eq(6).find("a").css({"background":"#9517ff"});
+            }
+  
+          });
+  
+          return false;
+        });
+  
+        //js/side.js
+        $(function(){
+  
+          $('.wrap_af').hide();
+  
+          $(".fa-bars").click(function(){
+            $("#side").animate({left:'0'},500);
+            $(this).fadeOut();
+            $('.wrap_af').fadeIn();
+          });
+  
+  
+  
+          $(".fa-chevron-left").click(function(){
+            $("#side").animate({left:'-310'},500);
+            $(".fa-bars").fadeIn();
+            $('.wrap_af').fadeOut();
+          });
+  
+        });
+  
+  
+        //js/mousewheel.js
+        $(function(){
+          var win_h = $(window).height();
+          $('.page').each(function(index){
+            $(this).attr("data-index",win_h * index);
+          });
+  
+          $('.page').on("mousewheel",function(e){
+            var pagePos = parseInt($(this).attr("data-index"));
+            if(e.originalEvent.wheelDelta >=0 ){
+              $("html,body").stop().animate({scrollTop:pagePos - win_h});
+              return false;
+            } else if (e.originalEvent.wheelDelta < 0) {
+              $("html,body").stop().animate({scrollTop:pagePos + win_h});
+              return false;
+            }
+          });
+        });
+      </script>
+
+</head>
+<body>
+    <div id="wrap">
+        <div class="wrap_af"></div>
+        <!--오른쪽 슬라이드 버튼-->
+        <div id="dot">
+          <ul>
+            <li><a href="#p0">01</a></li>
+            <li><a href="#p1">02</a></li>
+            <li><a href="#p2">03</a></li>
+          </ul>
+        </div>
+        <header>
+  
+        </header>
+  
+        <section class="page_wrap">
+          <!-- page 00 -->
+          <div class="page p00 section" id="particles-js">
+          </div>
+          <!-- 01 PF-->
+          <article class="page p01 section" id="p1">
+          </article>
+          <!-- 02 PF-->
+          <article class="page p02 section" id="p2">
+          </article>
+          
+        </section>
+      </div><!--//wrap-->
+    </body>
+</body>
+</html>

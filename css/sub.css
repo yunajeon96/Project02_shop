@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'InkLipquid';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @font-face {
     font-family: 'SUITE-Regular';
@@ -23,7 +30,7 @@ ul,li,ol {
 }
 
 #sub_show{width:1440px;
-          height:93vh;
+          height:100vh;
           background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
           margin:0 auto;
           box-sizing:border-box;
@@ -85,11 +92,21 @@ ul,li,ol {
           
  .right_menu{position:absolute;top:10%;left:30%;width:1025px;height:80vh;overflow:hidden;}
  .right_menu>h1{font-size:3vw;text-align:right;margin:4% 5% -6%;}
- .wrap{display:flex;width:1440px;}
- .right{width:360px;height:50vh;background-color:rgba(255,255,255,0.4); margin: 6% 1%;border-radius:38%;}
+ .wrap{display:flex;width:2160px;}
+ .right{width:360px;height:48vh;background-color:rgba(255,255,255,0.4); margin: 6% 1%;border-radius:38%;}
  .right img{margin:10% 5% 0;}
- .right p:nth-of-type(1){font-weight:900;font-size:1.3em;color:#070711;}
- .right p:nth-of-type(2){font-size:0.8em;margin:5%;}
+ .right>p:nth-of-type(1){font-weight:900;font-size:1.3em;color:#070711;}
+ .right>p:nth-of-type(2){font-size:0.8em;margin:5% 10%;}
+
+ .btn1{background:rgba(253,277,277,0.2); margin:6% auto;
+                width:100px; height:30px; transition:.2s;cursor:pointer;
+                box-shadow:0px 2px 5px rgba(0,0,0,.2);border-radius:5px;border:none;font-size:10px;overflow:hidden;}
+ .btn1Text{padding:7px;font-size:11px;font-weight:600;} 
+ .btnText a{color:#070711;}           
+ .btn2{position:relative;width:80px;height:35px;background:#29324A;transition:.3s;border:none;left:-100px;top:-30px;}
+ .btn2Text{color:#fff;text-align:right;font-size:13px;padding:8px;}
+ .btn1:hover .btn1Text{margin-left:44px;}
+ .btn1:hover .btn2{left:-40px;}
 
 
 
@@ -97,7 +114,7 @@ ul,li,ol {
 
 
 #sub_buy{width:1440px;
-         height:93vh;
+         height:100vh;
          background-color:black;
         margin:0 auto;}
 
@@ -108,7 +125,7 @@ ul,li,ol {
 
 
 #sub_review{width:1440px;
-            height:93vh;
+            height:100vh;
          background-color:mistyrose;
         margin:0 auto;}
 
