@@ -1,197 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sub2</title>
-    <style>
-        * {margin:0; padding:0; box-sizing:border-box;}
-        body {height:100%; overflow-y: hidden; font-size:10px;}
-        html {height:100%;}
-        body::-webkit-scrollbar {display: none;}
-        ul,li,ol {list-style:none;}
-        a {text-decoration:none; color:#555;}
-  
-        #wrap {width:100%; height:100%; position:relative;}
-        #wrap>.wrap_af {content:""; position:fixed; display:block; width:100%;
-          height:100%; background:rgba(0,0,0,0.5); top:0; left:0;z-index:20; }
-        /*오른쪽 버튼*/
-        #dot {width:80px; height:250px;  position:fixed; justify-content:center;
-          align-items:center; display:flex;
-          top:50%; right:0px; transform:translatey(-50%); z-index:100;}
-        #dot>ul {width:40px; height:220px;}
-        #dot li {width:20px; height:20px; position:relative;
-          display:block; margin:10px auto; border-radius:50%;
-          box-shadow:-0px 0px 5px rgba(255,255,255,0.1);}
-        #dot li a {background:rgba(255,255,255,0.7);
-          transition:all 0.3s ease-in-out;
-          top:0; left:0; width:100%; height:100%; outline:none; border-radius:50%;
-          background-color:#fff; background:rgba(255,255,255,0.5);
-          cursor:pointer; position:absolute;}
-        #dot ul .active {box-shadow:0 0 0 2px #f0a91b;}
 
-        #dot li:hover {opacity:1; cursor:pointer;}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sub2</title>
+
+  <link rel="stylesheet" href="css/sub.css">
   
-        section{width:100%; height:100%; position:relative;}
-  
-        /*페이지*/
-        .page {width:100%; height:100%; position:relative; margin:0 auto; background:#f7f0e4;}
-        /*p0*/
-        #particles-js {width:100%; height:100%; position:relative; background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);}
-  
-  
-        /*바탕 포인트 컬러*/
-        .background {width:px; height:px; position:absolute; top:10%;}
-        .p01 {background:#555;}
-        .p02 {background:#d6130f;}
-        
-  
-        /*pf_bot*/
-        .pf_bot {width:100%; height:100%; padding:50px 0; position:relative;}
-  
-      </style>
-  
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  
-      <script>
-        //js/dot.js
-        $(function(){
-          var dot = $("#dot ul li");
-          var contents = $(".page_wrap>.page");
-  
-          dot.click(function(e){
-            e.preventDefault();
-            var target = $(this);
-            var index = target.index();
-            var section = contents.eq(index);
-            var offset = section.offset().top;
-            $("html,body").animate({scrollTop:offset},600);
-          });
-  
-          $(window).scroll(function(){
-            var wScroll = $(this).scrollTop();
-  
-            if(wScroll >= contents.eq(0).offset().top){
-              dot.css({"background":"rgba(255,255,255,0.1)"});
-              dot.find("a").css({"background":"rgba(255,255,255,0.5)"});
-              dot.removeClass("active");
-              dot.eq(0).addClass("active");
-              dot.eq(0).find("a").css({"background":"#0cdaff"});
-            }
-            if(wScroll >= contents.eq(1).offset().top){
-              dot.css({"background":"rgba(0,0,0,0.7)"});
-              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-              dot.removeClass("active");
-              dot.eq(1).addClass("active");
-              dot.eq(1).find("a").css({"background":"#0189ff"});
-            }
-            if(wScroll >= contents.eq(2).offset().top){
-              dot.removeClass("active");
-              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-              dot.eq(2).addClass("active");
-              dot.eq(2).find("a").css({"background":"#f0a91b"});
-            }
-            if(wScroll >= contents.eq(3).offset().top){
-              dot.removeClass("active");
-              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-              dot.eq(3).addClass("active");
-              dot.eq(3).find("a").css({"background":"#fff"});
-            }
-            if(wScroll >= contents.eq(4).offset().top){
-              dot.removeClass("active");
-              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-              dot.eq(4).addClass("active");
-              dot.eq(4).find("a").css({"background":"#d6130f"});
-            }
-            if(wScroll >= contents.eq(5).offset().top){
-              dot.removeClass("active");
-              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-              dot.eq(5).addClass("active");
-              dot.eq(5).find("a").css({"background":"#a0ef08"});
-            }
-            if(wScroll >= contents.eq(6).offset().top){
-              dot.removeClass("active");
-              dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-              dot.eq(6).addClass("active");
-              dot.eq(6).find("a").css({"background":"#9517ff"});
-            }
-  
-          });
-  
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+  <script>
+    //js/dot.js
+    $(function () {
+      var dot = $("#dot ul li");
+      var contents = $(".page_wrap>.page");
+
+      dot.click(function (e) {
+        e.preventDefault();
+        var target = $(this);
+        var index = target.index();
+        var section = contents.eq(index);
+        var offset = section.offset().top;
+        $("html,body").animate({ scrollTop: offset }, 600);
+      });
+
+      $(window).scroll(function () {
+        var wScroll = $(this).scrollTop();
+
+        if (wScroll >= contents.eq(0).offset().top) {
+          dot.css({ "background": "rgba(255,255,255,0.1)" });
+          dot.find("a").css({ "background": "rgba(255,255,255,0.5)" });
+          dot.removeClass("active");
+          dot.eq(0).addClass("active");
+          dot.eq(0).find("a").css({ "background": "#0cdaff" });
+        }
+        if (wScroll >= contents.eq(1).offset().top) {
+          dot.css({ "background": "rgba(0,0,0,0.7)" });
+          dot.find("a").css({ "background": "rgba(0,0,0,0.5)" });
+          dot.removeClass("active");
+          dot.eq(1).addClass("active");
+          dot.eq(1).find("a").css({ "background": "#0189ff" });
+        }
+        if (wScroll >= contents.eq(2).offset().top) {
+          dot.removeClass("active");
+          dot.find("a").css({ "background": "rgba(0,0,0,0.5)" });
+          dot.eq(2).addClass("active");
+          dot.eq(2).find("a").css({ "background": "#f0a91b" });
+        }
+      });
+      return false;
+    });
+
+    //js/side.js
+    $(function () {
+
+      $('.wrap_af').hide();
+
+      $(".fa-bars").click(function () {
+        $("#side").animate({ left: '0' }, 500);
+        $(this).fadeOut();
+        $('.wrap_af').fadeIn();
+      });
+
+
+
+      $(".fa-chevron-left").click(function () {
+        $("#side").animate({ left: '-310' }, 500);
+        $(".fa-bars").fadeIn();
+        $('.wrap_af').fadeOut();
+      });
+
+    });
+
+
+    //js/mousewheel.js
+    $(function () {
+      var win_h = $(window).height();
+      $('.page').each(function (index) {
+        $(this).attr("data-index", win_h * index);
+      });
+
+      $('.page').on("mousewheel", function (e) {
+        var pagePos = parseInt($(this).attr("data-index"));
+        if (e.originalEvent.wheelDelta >= 0) {
+          $("html,body").stop().animate({ scrollTop: pagePos - win_h });
           return false;
+        } else if (e.originalEvent.wheelDelta < 0) {
+          $("html,body").stop().animate({ scrollTop: pagePos + win_h });
+          return false;
+        }
+      });
+    });
+    
+    //next 버튼 css 효과
+    $(function () {
+      $('.btn')
+        .on('mouseenter', function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find('span').css({
+            top: relY,
+            left: relX
+          })
+        })
+        .on('mouseout', function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find('span').css({
+            top: relY,
+            left: relX
+          })
         });
-  
-        //js/side.js
-        $(function(){
-  
-          $('.wrap_af').hide();
-  
-          $(".fa-bars").click(function(){
-            $("#side").animate({left:'0'},500);
-            $(this).fadeOut();
-            $('.wrap_af').fadeIn();
-          });
-  
-  
-  
-          $(".fa-chevron-left").click(function(){
-            $("#side").animate({left:'-310'},500);
-            $(".fa-bars").fadeIn();
-            $('.wrap_af').fadeOut();
-          });
-  
-        });
-  
-  
-        //js/mousewheel.js
-        $(function(){
-          var win_h = $(window).height();
-          $('.page').each(function(index){
-            $(this).attr("data-index",win_h * index);
-          });
-  
-          $('.page').on("mousewheel",function(e){
-            var pagePos = parseInt($(this).attr("data-index"));
-            if(e.originalEvent.wheelDelta >=0 ){
-              $("html,body").stop().animate({scrollTop:pagePos - win_h});
-              return false;
-            } else if (e.originalEvent.wheelDelta < 0) {
-              $("html,body").stop().animate({scrollTop:pagePos + win_h});
-              return false;
-            }
-          });
-        });
-      </script>
+    });
+
+
+    //slide 넘기기
+    $(function () {
+      var totalNum = $(".wrap>div").length;
+      var currentNum = 1
+      $(".btn").click(function () {
+        currentNum++;
+        if (currentNum > totalNum) {
+          currentNum = 1;
+        }
+        $(".wrap >div:first").insertAfter(".wrap> div:last");
+      });
+    })
+  </script>
 
 </head>
+
 <body>
-    <div id="wrap">
-        <div class="wrap_af"></div>
-        <!--오른쪽 슬라이드 버튼-->
-        <div id="dot">
-          <ul>
-            <li><a href="#p0">01</a></li>
-            <li><a href="#p1">02</a></li>
-            <li><a href="#p2">03</a></li>
-          </ul>
-        </div>
-        <header>
+  <div id="wrap">
+    <div class="wrap_af"></div>
+    <!--오른쪽 슬라이드 버튼-->
+    <div id="dot">
+      <ul>
+        <li><a href="#p0">01</a></li>
+        <li><a href="#p1">02</a></li>
+        <li><a href="#p2">03</a></li>
+      </ul>
+    </div>
+    <!-- <header>
   
-        </header>
-  
-        <section class="page_wrap">
-          <!-- page 00 -->
-          <div class="page p00 section" id="particles-js">
+        </header> -->
+
+    <section class="page_wrap">
+      <!-- page 00 -->
+      <div class="page p00 section" id="particles-js">
+        <div id="sub_show">
+          <div class="circle"></div>
+          <div class="left_menu">
+            <p>Choose your Preference</p>
+            <h6>&nbsp;배쓰 밤은 다양한 색상, 향 및 모든 모양과 크기로 제공됩니다.<br>
+              &nbsp;간단히 누르는 방식부터 그냥 풀어놓아도 색과 에센셜 오일이 폭발하여 당신의 취향에 맞는 배쓰밤으로 목욕 시간이 더 즐거워집니다!</h6>
+            <a class="btn" href="#">
+              <p>NEXT</p><span></span>
+            </a>
           </div>
-          <!-- 01 PF-->
-          <article class="page p01 section" id="p1">
-          </article>
-          <!-- 02 PF-->
-          <article class="page p02 section" id="p2">
-          </article>
+          <div class="right_menu">
+            <h1>BATH BOMB</h1>
+            <div class="wrap">
+              <div class="right">
+                <img src="img/sub/butterball.png" alt="1">
+                <p>Butterball</p>
+                <p>따뜻하고 달콤한 바닐라 향기와 코코넛 버터가 가득한 배쓰밤</p>
+                <div class="btn1">
+                  <p class="btn1Text"><a href="#p1">MORE?</a></p>
+                  <div class="btn2">
+                    <p class="btn2Text">Go!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="img/sub/intergalactic.png" alt="2">
+                <p>Intergalactic</p>
+                <p>상쾌한 페퍼민트와 포도씨 오일 조합이 환상적인 은하계 배쓰밤</p>
+                <div class="btn1">
+                  <p class="btn1Text"><a href="#p1">MORE?</a></p>
+                  <div class="btn2">
+                    <p class="btn2Text">Go!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="img/sub/sakura.png" alt="3">
+                <p>Sakura</p>
+                <p>절제되고 차분한 미모사와 자스민 오일이 가득한 배쓰밤</p>
+                <div class="btn1">
+                  <p class="btn1Text"><a href="#p1">MORE?</a></p>
+                  <div class="btn2">
+                    <p class="btn2Text">Go!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="img/sub/peachy.png" alt="4">
+                <p>Peachy</p>
+                <p>달콤하고 상큼한 복숭아 과일향이 가득 퍼지는 여름 배쓰밤</p>
+                <div class="btn1">
+                  <p class="btn1Text"><a href="#p1">MORE?</a></p>
+                  <div class="btn2">
+                    <p class="btn2Text">Go!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="img/sub/sex bomb.png" alt="5">
+                <p>Sex bomb</p>
+                <p>자스민, 일랑일랑, 클라리 세이지 오일이 듬뿍 들어가 감각적인 치유의 배쓰밤</p>
+                <div class="btn1">
+                  <p class="btn1Text"><a href="#p1">MORE?</a></p>
+                  <div class="btn2">
+                    <p class="btn2Text">Go!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="img/sub/big blue.png" alt="6">
+                <p>Big blue</p>
+                <p>아라메 해초와 레몬과 라벤더 오일의 블렌드로 편안한 향의 배쓰밤</p>
+                <div class="btn1">
+                  <p class="btn1Text"><a href="#p1">MORE?</a></p>
+                  <div class="btn2">
+                    <p class="btn2Text">Go!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- 01 PF-->
+      <article class="page p01 section" id="p1">
+        <div class="video">
+          <video autoplay muted loop>
+              <source src="img/sub/intergalactic.mp4" type="video/mp4" ;>
+          </video>
+        </div>
+        <div class="price">
+          <img src="img/sub/intergalactic.png" alt="1">
+          <div class="tac">BEST SELLER</div>
+          <p>INTERGALACTIC</p>
+          <p>BATH BOMB</p>
+          <div class="stararea">
+            <span class="starpoint" style="width:80%;"></span>
+            <p>4.5(480)</p>
+          </div>
           
-        </section>
-      </div><!--//wrap-->
-    </body>
+          <div class="bar">
+            <h6>aromatic 75%</h6>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+
+            <h6>green 60%</h6>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+
+            <h6>lavender 30%</h6>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+
+        </div>
+          <div class="calculate">
+            <div class="calbtn">-</div>
+            <div class="calbtn">1</div>
+            <div class="calbtn">+</div>
+            <div class="total">원</div>
+            <div class="add">Add to bag</div>
+          </div>
+        </div>
+       
+        
+  
+
+
+      </article>
+      <!-- 02 PF-->
+      <article class="page p02 section" id="p2">
+      </article>
+
+    </section>
+  </div><!--//wrap-->
 </body>
+</body>
+
 </html>
