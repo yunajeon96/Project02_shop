@@ -131,6 +131,37 @@
         $(".wrap >div:first").insertAfter(".wrap> div:last");
       });
     })
+ 
+
+
+       //총 상품 금액
+        $(function () {
+          var price_sum = 6000;
+
+        $(".price_sum").append("<span>" +price_sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원 </span>");
+
+
+        
+          $('.plus').click(function () {
+            $(".price_value").val(parseInt($(".price_value").val()) + 1);
+            var sum = parseInt($(".price_value").val() * price_sum);
+            $(".price_sum").html("<span>" + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원</span>");
+          });
+
+          $('.minus').click(function () {
+            if ($(".price_value").val() < 2) {
+              alert("1개 이상 구매가 가능합니다.");
+              $(".price_value").val(2);
+            }
+            $(".price_value").val(parseInt($(".price_value").val()) - 1);
+            var sum = parseInt($(".price_value").val() * price_sum);
+            $(".price_sum").html("<span>" + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원</span>");
+          });
+        });
+      
+
+
+
   </script>
 
 </head>
@@ -245,59 +276,130 @@
       </div>
       <!-- 01 PF-->
       <article class="page p01 section" id="p1">
-        <div class="video">
-          <video autoplay muted loop>
-              <source src="img/sub/intergalactic.mp4" type="video/mp4" ;>
-          </video>
-        </div>
-        <div class="price">
-          <img src="img/sub/intergalactic.png" alt="1">
-          <div class="tac">BEST SELLER</div>
-          <p>INTERGALACTIC</p>
-          <p>BATH BOMB</p>
-          <div class="stararea">
-            <span class="starpoint" style="width:80%;"></span>
-            <p>4.5(480)</p>
-          </div>
-          
-          <div class="bar">
-            <h6>aromatic 75%</h6>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-
-            <h6>green 60%</h6>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-
-            <h6>lavender 30%</h6>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-
-        </div>
-          <div class="calculate">
-            <div class="calbtn">-</div>
-            <div class="calbtn">1</div>
-            <div class="calbtn">+</div>
-            <div class="total">원</div>
-            <div class="add">Add to bag</div>
-          </div>
-        </div>
        
-        
-  
+          <div class="video">
+            <video autoplay muted loop>
+              <source src="img/sub/intergalactic.mp4" type="video/mp4" ;>
+            </video>
+          </div>
+          <div class="price">
+            <img src="img/sub/intergalactic.png" alt="1">
+            <div class="tac">BEST SELLER</div>
+            <p>INTERGALACTIC</p>
+            <p>BATH BOMB</p>
+            <div class="stararea">
+              <span class="starpoint" style="width:80%;"></span>
+              <p><a href="#">4.5(480)</a></p>
+            </div>
+      
+            <div class="bar">
+              <h6>aromatic 75%</h6>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+      
+              <h6>green 60%</h6>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+      
+              <h6>lavender 30%</h6>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+      
+            </div>
+            <div class="calculate">
+              <div class="minus">-</div>
+              <input type="text" class="price_value" value="1">
+              <!-- <div class="price_value">1</div> -->
+              <div class="plus">+</div>
+              <div class="price_sum"></div>
+              <div class="add"><a href="#">Add to bag</a></div>
+            </div>
+         
+        </div>
 
-
+       
+      
       </article>
       <!-- 02 PF-->
       <article class="page p02 section" id="p2">
-      </article>
+        <img src="img/sub/review.jpg" alt="review">
+        <span>Review</span>
+        <h3>4.5</h3>
+        <span>PRODUCT</span>
+        <h3>4.7</h3>
+        <span>Delivery</span>
 
+        <div class="bar_reviews">
+          <div class="review"><span>5</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+              <h6>206</h6>
+            </div>
+          </div>
+        
+          <div class="review">
+            <span>4</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+              <h6>120</h6>
+            </div>
+          </div>
+        
+          <div class="review">
+            <span>3</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+              <h6>1</h6>
+            </div>
+        
+            <div class="review">
+              <span>2</span>
+              <div class="progress-bar">
+                <div class="progress"></div>
+                <h6>7</h6>
+              </div>
+        
+              <div class="review">
+                <span>1</span>
+                <div class="progress-bar">
+                  <div class="progress"></div>
+                  <h6>5</h6>
+                </div>
+              </div>
+          </div>
+          <table>
+            <tr>
+              <td>oxo****</td>
+              <td>star</td>
+            </tr>
+            <tr>
+              <td>review1</td>
+              <td>배쓰밤 너무 좋아요</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>향기가 너무 좋고 친구들한테도 꼭 선물해주고 싶어요</td>
+            </tr>
+            <tr>
+              <td>ab****</td>
+              <td>star</td>
+            </tr>
+            <tr>
+              <td>review5</td>
+              <td>비싸긴 하지만 끊을수가 없어요</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>프레쉬세일 아닐때면 사기가 좀 부담스러워요</td>
+            </tr>
+          </table>
+      </article>
     </section>
   </div><!--//wrap-->
-</body>
+
 </body>
 
 </html>

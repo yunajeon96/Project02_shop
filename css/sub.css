@@ -136,8 +136,8 @@ section {
   height: 100%;
   position: relative;
   margin: 0 auto;
-  background: #fff;
-}
+  }
+
 
 /*p0*/
 #particles-js {
@@ -158,7 +158,7 @@ section {
 
 
 .p02 {
-  background: #d6130f;
+  background: #fad0c4;
 }
 
 
@@ -374,10 +374,10 @@ section {
 .price>p:nth-of-type(1){font-size:6em;font-weight:800;padding:3% 0 5%;}
 .price>p:nth-of-type(2){font-size:3em;}
 
-.stararea{width:100px;height:auto;margin:5% 0; position:relative;}
+.stararea{width:120px;height:auto;margin:5% 0 0; position:relative;}
 .stararea span{width:20%;background-color:yellow;height:20px;display:block;position:relative;z-index:1;}
-.stararea::after{width:100px;height:20px;background:url(/img/sub/star_bar.svg) no-repeat; background-size:100%;display:block;content:"";position:absolute;top:0;left:0;z-index:3;}
-.stararea>p{display:block;font-size:1.5em;margin:-20% 130%;}
+.stararea::after{width:120px;height:20px;background:url(/img/sub/star_bar.svg) no-repeat; background-size:100%;display:block;content:"";position:absolute;top:0;left:0;z-index:3;}
+.stararea>p{display:block;font-size:1.5em;margin:-14% 120%;}
 
 .bar{width:100%;margin:10% 0;}
 .bar h6{font-size:2em; margin:1.5% 0;font-weight:300;}
@@ -386,8 +386,17 @@ section {
 .progress-bar:nth-of-type(2) .progress{width:60%;height:3vh;background-color:#2bb22d;}
 .progress-bar:nth-of-type(3) .progress{width:30%;height:3vh;background-color:#9985d6;}
 
-.calculate{width:80%;height:13vh;display:flex;justify-content:space-between;flex-flow:row wrap;}
-.calculate>div{width:33%;height:7vh;font-size:3em;text-align:center;}
+.calculate{width:80%;height:10vh;display:flex;justify-content:space-between;flex-flow:row wrap;}
+.calculate>div{width:25%;height:4vh;font-size:2em;text-align:center;margin:-15px 15px 35px;line-height:30px;}
+.price_value{text-align:center;;font-size:2em;margin:-8% 0 0;border:none;}
+/* .price_sum{border:0.5px solid black;} */
+.add{background-color:black;color:#fff;} 
+.add a{color:#fff;font-size:0.7em;}
 
 
 
+/* p2 */
+#p2{width:100%;height:100%;}
+#p2 img{width:50%; height:100%;}
+.img img{width:100%;height:100%;}
+#p2>span:first-child{float:left;font-size:250px;width:5%;height:auto;}
