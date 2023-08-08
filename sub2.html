@@ -8,161 +8,10 @@
 
   <link rel="stylesheet" href="css/sub.css">
   
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
-  <script>
-    //js/dot.js
-    $(function () {
-      var dot = $("#dot ul li");
-      var contents = $(".page_wrap>.page");
+  <script src="js/sub.js"></script>
 
-      dot.click(function (e) {
-        e.preventDefault();
-        var target = $(this);
-        var index = target.index();
-        var section = contents.eq(index);
-        var offset = section.offset().top;
-        $("html,body").animate({ scrollTop: offset }, 600);
-      });
-
-      $(window).scroll(function () {
-        var wScroll = $(this).scrollTop();
-
-        if (wScroll >= contents.eq(0).offset().top) {
-          dot.css({ "background": "rgba(255,255,255,0.1)" });
-          dot.find("a").css({ "background": "rgba(255,255,255,0.5)" });
-          dot.removeClass("active");
-          dot.eq(0).addClass("active");
-          dot.eq(0).find("a").css({ "background": "#0cdaff" });
-        }
-        if (wScroll >= contents.eq(1).offset().top) {
-          dot.css({ "background": "rgba(0,0,0,0.7)" });
-          dot.find("a").css({ "background": "rgba(0,0,0,0.5)" });
-          dot.removeClass("active");
-          dot.eq(1).addClass("active");
-          dot.eq(1).find("a").css({ "background": "#0189ff" });
-        }
-        if (wScroll >= contents.eq(2).offset().top) {
-          dot.removeClass("active");
-          dot.find("a").css({ "background": "rgba(0,0,0,0.5)" });
-          dot.eq(2).addClass("active");
-          dot.eq(2).find("a").css({ "background": "#f0a91b" });
-        }
-      });
-      return false;
-    });
-
-    //js/side.js
-    $(function () {
-
-      $('.wrap_af').hide();
-
-      $(".fa-bars").click(function () {
-        $("#side").animate({ left: '0' }, 500);
-        $(this).fadeOut();
-        $('.wrap_af').fadeIn();
-      });
-
-
-
-      $(".fa-chevron-left").click(function () {
-        $("#side").animate({ left: '-310' }, 500);
-        $(".fa-bars").fadeIn();
-        $('.wrap_af').fadeOut();
-      });
-
-    });
-
-
-    //js/mousewheel.js
-    $(function () {
-      var win_h = $(window).height();
-      $('.page').each(function (index) {
-        $(this).attr("data-index", win_h * index);
-      });
-
-      $('.page').on("mousewheel", function (e) {
-        var pagePos = parseInt($(this).attr("data-index"));
-        if (e.originalEvent.wheelDelta >= 0) {
-          $("html,body").stop().animate({ scrollTop: pagePos - win_h });
-          return false;
-        } else if (e.originalEvent.wheelDelta < 0) {
-          $("html,body").stop().animate({ scrollTop: pagePos + win_h });
-          return false;
-        }
-      });
-    });
-    
-    //next 버튼 css 효과
-    $(function () {
-      $('.btn')
-        .on('mouseenter', function (e) {
-          var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-          $(this).find('span').css({
-            top: relY,
-            left: relX
-          })
-        })
-        .on('mouseout', function (e) {
-          var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-          $(this).find('span').css({
-            top: relY,
-            left: relX
-          })
-        });
-    });
-
-
-    //slide 넘기기
-    $(function () {
-      var totalNum = $(".wrap>div").length;
-      var currentNum = 1
-      $(".btn").click(function () {
-        currentNum++;
-        if (currentNum > totalNum) {
-          currentNum = 1;
-        }
-        $(".wrap >div:first").insertAfter(".wrap> div:last");
-      });
-    })
- 
-
-
-       //총 상품 금액
-        $(function () {
-          var price_sum = 6000;
-
-        $(".price_sum").append("<span>" +price_sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원 </span>");
-
-
-        
-          $('.plus').click(function () {
-            $(".price_value").val(parseInt($(".price_value").val()) + 1);
-            var sum = parseInt($(".price_value").val() * price_sum);
-            $(".price_sum").html("<span>" + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원</span>");
-          });
-
-          $('.minus').click(function () {
-            if ($(".price_value").val() < 2) {
-              alert("1개 이상 구매가 가능합니다.");
-              $(".price_value").val(2);
-            }
-            $(".price_value").val(parseInt($(".price_value").val()) - 1);
-            var sum = parseInt($(".price_value").val() * price_sum);
-            $(".price_sum").html("<span>" + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원</span>");
-          });
-        });
-      
-
-
-
-  </script>
 
 </head>
 
@@ -288,7 +137,7 @@
             <p>INTERGALACTIC</p>
             <p>BATH BOMB</p>
             <div class="stararea">
-              <span class="starpoint" style="width:80%;"></span>
+              <span class="starpoint" style="width:92%;"></span>
               <p><a href="#">4.5(480)</a></p>
             </div>
       
@@ -310,10 +159,9 @@
       
             </div>
             <div class="calculate">
-              <div class="minus">-</div>
-              <input type="text" class="price_value" value="1">
-              <!-- <div class="price_value">1</div> -->
-              <div class="plus">+</div>
+           
+              <div class="minus cal">-</div>   <input type="text" class="price_value" value="1">
+              <div class="plus cal">+</div>
               <div class="price_sum"></div>
               <div class="add"><a href="#">Add to bag</a></div>
             </div>
@@ -325,77 +173,116 @@
       </article>
       <!-- 02 PF-->
       <article class="page p02 section" id="p2">
-        <img src="img/sub/review.jpg" alt="review">
-        <span>Review</span>
+        <img src="img/sub/review.png" alt="review">
+        <h1>Review</h1>
         <h3>4.5</h3>
         <span>PRODUCT</span>
         <h3>4.7</h3>
-        <span>Delivery</span>
-
+        <span>DELIVERY</span>
+      
         <div class="bar_reviews">
-          <div class="review"><span>5</span>
-            <div class="progress-bar">
-              <div class="progress"></div>
-              <h6>206</h6>
-            </div>
+          <div class="pro-bar">
+            <div class="pro"></div>
+            <span>5</span>
+            <span>206</span>
           </div>
-        
-          <div class="review">
+      
+          <div class="pro-bar">
+            <div class="pro"></div>
             <span>4</span>
-            <div class="progress-bar">
-              <div class="progress"></div>
-              <h6>120</h6>
-            </div>
+            <span>120</span>
           </div>
-        
-          <div class="review">
+      
+          <div class="pro-bar">
+            <div class="pro"></div>
             <span>3</span>
-            <div class="progress-bar">
-              <div class="progress"></div>
-              <h6>1</h6>
-            </div>
-        
-            <div class="review">
-              <span>2</span>
-              <div class="progress-bar">
-                <div class="progress"></div>
-                <h6>7</h6>
-              </div>
-        
-              <div class="review">
-                <span>1</span>
-                <div class="progress-bar">
-                  <div class="progress"></div>
-                  <h6>5</h6>
-                </div>
-              </div>
+            <span>1</span>
           </div>
-          <table>
+      
+          <div class="pro-bar">
+            <div class="pro"></div>
+            <span>2</span>
+            <span>7</span>
+          </div>
+      
+          <div class="pro-bar">
+            <div class="pro"></div>
+            <span>1</span>
+            <span>5</span>
+          </div>
+        </div>
+      
+        <div class="review_bot">
+          <span class="prev">&lt;</span>
+          <span class="next">&gt;</span>
+        
+          <table class="table t1">
             <tr>
               <td>oxo****</td>
-              <td>star</td>
+              <td>
+                <div class="stararea">
+                  <span class="starpoint" style="width:100%;"></span>
+              </td>
             </tr>
             <tr>
-              <td>review1</td>
-              <td>배쓰밤 너무 좋아요</td>
+              <td><a href="#">review1</a></td>
+              <td><b>배쓰밤 너무 좋아요</b></td>
             </tr>
             <tr>
               <td></td>
-              <td>향기가 너무 좋고 친구들한테도 꼭 선물해주고 싶어요</td>
+              <td style="font-size:small">향기가 너무 좋고 친구들한테도 꼭 선물해주고 싶어요.이 향 말고 다른 배쓰밤도 다쓰면 꼭 구매하고 싶어요.</td>
             </tr>
             <tr>
               <td>ab****</td>
-              <td>star</td>
+              <td>
+                <div class="stararea">
+                  <span class="starpoint" style="width:70%;"></span>
+              </td>
             </tr>
             <tr>
-              <td>review5</td>
-              <td>비싸긴 하지만 끊을수가 없어요</td>
+              <td><a href="#">review5</a></td>
+              <td><b>비싸긴 하지만 끊을수가 없어요</b></td>
             </tr>
             <tr>
               <td></td>
-              <td>프레쉬세일 아닐때면 사기가 좀 부담스러워요</td>
+              <td style="font-size:small">프레쉬세일 아닐때면 사기가 좀 부담스러워요</td>
             </tr>
           </table>
+        
+          <table class="table t2">
+            <tr>
+              <td>ddd****</td>
+              <td>
+                <div class="stararea">
+                  <span class="starpoint" style="width:80%;"></span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#">review3</a></td>
+              <td><b>세상에나.. 목욕시간이 기다려집니다</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="font-size:small">아이들이 목욕시간을 제일 즐거워해요. 너무 오래있어서 괴로울 정도입니다</td>
+            </tr>
+            <tr>
+              <td>ab****</td>
+              <td>
+                <div class="stararea">
+                  <span class="starpoint" style="width:50%;"></span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#">review2</a></td>
+              <td><b>몇자를 채워야되나</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="font-size:small">가격만 착하면 자주 구매할듯요</td>
+            </tr>
+          </table>
+        
+        </div>
       </article>
     </section>
   </div><!--//wrap-->
