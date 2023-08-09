@@ -14,26 +14,34 @@ $(function () {
 
   $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
+    // var i=0;
+    // if(wScroll>=$(".section").index(i).offset().top){
+    //   i++;
+    //   dot.css({"background":"rgba(255,255,255,0.1)"});
+    //   dot.index(i).addClass("active");
+    //   dot.index(i).siblings().removeClass("active");
+    //   dot.index(i).find("a").css({"background":"pink"});
+    // }  
 
     if (wScroll >= contents.eq(0).offset().top) {
       dot.css({ "background": "rgba(255,255,255,0.1)" });
       dot.find("a").css({ "background": "rgba(255,255,255,0.5)" });
       dot.removeClass("active");
       dot.eq(0).addClass("active");
-      dot.eq(0).find("a").css({ "background": "#0cdaff" });
+      dot.eq(0).find("a").css({ "background": "pink" });
     }
     if (wScroll >= contents.eq(1).offset().top) {
       dot.css({ "background": "rgba(0,0,0,0.7)" });
-      dot.find("a").css({ "background": "rgba(0,0,0,0.5)" });
+      dot.find("a").css({ "background": "rgba(255,255,255,0.5)" });
       dot.removeClass("active");
       dot.eq(1).addClass("active");
-      dot.eq(1).find("a").css({ "background": "#0189ff" });
+      dot.eq(1).find("a").css({ "background": "yellow" });
     }
     if (wScroll >= contents.eq(2).offset().top) {
       dot.removeClass("active");
-      dot.find("a").css({ "background": "rgba(0,0,0,0.5)" });
+      dot.find("a").css({ "background": "rgba(255,255,255,0.5)" });
       dot.eq(2).addClass("active");
-      dot.eq(2).find("a").css({ "background": "#f0a91b" });
+      dot.eq(2).find("a").css({ "background": "purple" });
     }
   });
   return false;
@@ -41,23 +49,7 @@ $(function () {
 
 //js/side.js
 $(function () {
-
   $('.wrap_af').hide();
-
-  $(".fa-bars").click(function () {
-    $("#side").animate({ left: '0' }, 500);
-    $(this).fadeOut();
-    $('.wrap_af').fadeIn();
-  });
-
-
-
-  $(".fa-chevron-left").click(function () {
-    $("#side").animate({ left: '-310' }, 500);
-    $(".fa-bars").fadeIn();
-    $('.wrap_af').fadeOut();
-  });
-
 });
 
 
@@ -79,6 +71,7 @@ $(function () {
     }
   });
 });
+
 
 //next 버튼 css 효과
 $(function () {
@@ -155,4 +148,7 @@ $(function(){
   })
 })
 
-
+//별점
+// const drawStar=(target)=>{
+//   $('.star span').css({width:'${target.value*10}%'});
+// }
