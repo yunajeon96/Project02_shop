@@ -80,7 +80,7 @@ a {
   justify-content: center;
   align-items: center;
   display: flex;
-  top: 50%;
+  top: 20%;
   right: 0px;
   transform: translatey(-50%);
   z-index: 100;
@@ -180,11 +180,11 @@ section {
   .circle {
     border-radius: 50%;
     background-color: #29324A;
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: -75%;
-    top: -10%;
+    left: -50%;
+    top: 0;
   }
 
 
@@ -207,13 +207,12 @@ section {
     font-size: 1em;
     width: 80%;
     height: auto;
-    color: #fff;
+    color: #ffd1ff;
     font-weight: 100;
     margin: -40% auto 10%;
-    ;
     text-align: left;
     line-height: 2.2em;
-    opacity: 0.5;
+    opacity: 0.7;
 
   }
 
@@ -271,29 +270,31 @@ section {
     position: absolute;
     top: 10%;
     right: 0;
-    width: 60%;
+    width: 68%;
     height: 80%;
   }
 
   .right_menu>h1 {
-    font-size: 7vw;
+    font-size: 8vw;
     text-align: right;
-    margin: 20% 15% -6%;
+    margin: 20% 12% -4%;
   }
 
   .wrap {
     display: flex;
-    width: 100%;
-    overflow: hidden;
+    width: 400vw;
+    overflow:hidden;
   }
-
+  
   .right {
-    width: 160%;
-    height: 48vh;
+    width: 57vw;
+    height: 42vh;
     background-color: rgba(255, 255, 255, 0.4);
-    margin: 25% 5%;
+    margin: 5% 1%;
     border-radius: 40%;
+    box-sizing: border-box;
   }
+  .right>img{width:42vw;height:25vh;}
 
   .right>p:nth-of-type(1) {
     font-weight: 900;
@@ -303,8 +304,9 @@ section {
 
   .right>p:nth-of-type(2) {
     font-size: 1.1em;
-    margin: 8% 10%;
+    margin: 5% 10%;
     height: 2em;
+    width:85%;
   }
 
   .btn1 {
@@ -338,7 +340,7 @@ section {
     transition: .3s;
     border: none;
     left: -100%;
-    top: -105%;
+    top: -110%;
   }
 
   .btn2Text {
@@ -365,16 +367,16 @@ section {
 
   #p1>.video {
     width: 100%;
-    height: 100%;
+    height: 35%;
     overflow: hidden;
     position: absolute;
-    top: 8%;
+    top: 0;
     left: 0;
-    display: none;
+
   }
 
-  /* .video video{transform:translateX(-40%);} */
-  .video:after {
+  .video video{transform:translate(-45%,-30%);}
+  /* .video:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -383,13 +385,13 @@ section {
     left: 0;
     background: #fff;
     opacity: 0.6;
-  }
+  } */
 
   #p1 .price {
     width: 95%;
     height: auto;
     position: absolute;
-    top: 15%;
+    top: 33%;
     right: 0;
   }
 
@@ -401,9 +403,9 @@ section {
   }
 
   .price .tac {
-    font-size: 1.5em;
+    font-size: 1.3em;
     background-color: #ffd1ff;
-    width: 25%;
+    width: 20%;
     transform: rotate(-15deg);
   }
 
@@ -420,23 +422,24 @@ section {
 
 
   .stararea {
-    width: 25%;
+    width: 11em;
     height: auto;
     position: relative;
+    
   }
 
   .stararea span {
-    width: 20%;
+    width: 11em;
     background-color: yellow;
-    height: 20px;
+    height: 2em;
     display: block;
     position: relative;
     z-index: 1;
   }
 
   .stararea::after {
-    width: 120px;
-    height: 20px;
+    width: 10em;
+    height:18em;
     background: url(/img/sub/star_bar.svg) no-repeat;
     background-size: 100%;
     display: block;
@@ -445,6 +448,7 @@ section {
     top: 0;
     left: 0;
     z-index: 3;
+    background-color:transparent;
   }
 
   .stararea>p {
@@ -455,7 +459,7 @@ section {
 
   .bar {
     width: 100%;
-    margin: 20% 0 10%;
+    margin: 15% 0 10%;
   }
 
   .bar h6 {
@@ -616,6 +620,7 @@ section {
     width: 53%;
     height: 25%;
     font-size: 1.2em;
+    
   }
 
   .pro-bar {
@@ -750,28 +755,28 @@ section {
     position: absolute;
     top: 25%;
     left: 0;
-    width: 30%;
-    height: 50%;
+    width:28%;
+    height:auto;
+    
   }
 
   .left_menu>p {
     font-size: 3em;
-    width:50%;
+    width:75%;
     font-weight: 700;
-    margin: 15% 25% 50%;
+    margin: 15% auto;
     color: #fff;
   }
 
   .left_menu>h6 {
-    font-size: 1.1em;
-    width: 50%;
+    font-size: 1.2em;
+    width:50%;
     height: auto;
     color: #ffd1ff;
     font-weight: 100;
-    margin: -40% auto 10%;
-    ;
+    margin: 10% auto;
     text-align: left;
-    line-height: 2.5em;
+    line-height: 2.3em;
     opacity: 0.7;
 
   }
@@ -781,7 +786,7 @@ section {
     overflow: hidden;
     display: block;
     position: relative;
-    width: 50%;
+    width:130px;
     border: 1px solid #fff;
     font-size: 1.5em;
     line-height: 3em;
@@ -829,25 +834,25 @@ section {
   .right_menu {
     position: absolute;
     top: 10%;
-    left: 26%;
-    width: 67%;
-    height: 80vh;
-    overflow: hidden;
+    right: 2%;
+    width: 70%;
+    height:80%;
+    overflow:hidden;
   }
 
   .right_menu>h1 {
     font-size: 5em;
     text-align: right;
-    margin: 4% 3% -6%;
+    margin: 11% 3% -10%;
   }
 
   .wrap {
     display: flex;
-    width: 2400px;
+    width:2500px;
   }
 
   .right {
-    width: 30%;
+    width:330px;
     height:auto;
     background-color: rgba(255, 255, 255, 0.4);
     margin: 6% 1%;
@@ -925,44 +930,58 @@ section {
   }
 
   #p1>.video {
-    width: 30vw;
-    height: 75vh;
+    width: 95%;
+    height: 95%;
     overflow: hidden;
     position: absolute;
-    top: 15%;
-    left: 6%;
+    top: 3%;
+    left: 2%;
   }
 
-  .video video {
-    transform: translateX(-40%);
+
+  .video:after {
+    content: "";
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0.7;
   }
 
   #p1 .price {
-    width: 45%;
-    height: auto;
+    width: 55%;
+    height:70%;
     position: absolute;
     top: 15%;
-    right: 10%;
+    left: 5%;
+   
   }
 
   .price img {
-    position: absolute;
-    right: 0%;
-    width: 256px;
-    height: 256px;
+    position:absolute;
+    top:7%;
+    right:25%;
+    z-index:1;
+    width:30%;
+    height:auto;
   }
 
   .price .tac {
-    font-size: 2em;
+    font-size: 1.7em;
     background-color: #ffd1ff;
-    width: 20%;
+    width: 120px;
     transform: rotate(-15deg);
   }
 
   .price>p:nth-of-type(1) {
-    font-size: 6em;
+    font-size:4.5em;
     font-weight: 800;
     padding: 3% 0;
+    position:relative;
+    z-index:3;
+    
   }
 
   .price>p:nth-of-type(2) {
@@ -1005,12 +1024,12 @@ section {
   }
 
   .bar {
-    width: 100%;
-    margin: 8% 0;
+    width: 80%;
+    margin: 10% 0;
   }
 
   .bar h6 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin: 1.5% 0;
     font-weight: 100;
     color: #666;
@@ -1041,9 +1060,10 @@ section {
   }
 
   .calculate {
-    width: 80%;
-    height: 17vh;
+    width: 60%;
+    height: 13vh;
     position: relative;
+    
   }
 
   .calculate .cal {
@@ -1051,20 +1071,20 @@ section {
     height: 5vh;
     font-size: 2em;
     text-align: center;
-    margin: 1% 0;
+    margin: 0;
     line-height: 2em;
     box-shadow: 1px 1px 3px lightgray;
   }
 
   .minus {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 0;
   }
 
   .plus {
     position: absolute;
-    top: 10%;
+    top: 0;
     right: 0;
   }
 
@@ -1073,17 +1093,17 @@ section {
     font-size: 2em;
     border: none;
     position: absolute;
-    top: 20%;
-    ;
+    top: 7%;
     left: 45%;
     width: 10%;
+    background-color:transparent;
   }
 
   .price_sum {
     position: absolute;
-    bottom: 20%;
-    left: 70%;
-    font-size: 1.5em;
+    bottom: 23%;
+    left: 75%;
+    font-size: 1.2em;
     color: #fff;
     z-index: 2;
   }
@@ -1113,51 +1133,63 @@ section {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow:hidden;
   }
 
   #p2 img {
-    width: 45%;
-    height: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit:cover;
+    position:absolute;
+    /* top:-20%; */
+   
+    
   }
 
   .img img {
     width: 100%;
     height: 100%;
+    
   }
 
   #p2 h1 {
-    font-size: 15em;
+    font-size: 11em;
     position: absolute;
-    top: 7%;
-    left: 38%;
+    top: 43%;
+    right: 10%;
+   
   }
 
   #p2>h3 {
     position: absolute;
-    top: 32%;
-    left: 52%;
-    font-size: 7.5em;
+    top: 46%;
+    left: 8%;
+    font-size: 6.5em;
     color: rgba(0, 0, 0, 0.2);
+    width:20%;
   }
 
   #p2>h3:nth-of-type(2) {
     position: absolute;
-    top: 47%;
-    left: 52%;
+    top:46%;
+    left: 26%;
+    width:20%;
   }
 
   #p2>span {
     position: absolute;
-    top: 38%;
-    left: 52%;
+    top: 52%;
+    left: 8%;
     font-size: 2.5em;
     font-weight: bold;
+    width:20%;
   }
 
   #p2>span:nth-of-type(2) {
     position: absolute;
-    top: 53%;
-    left: 52%;
+    top: 52%;
+    left: 24%;
+    width:20%;
   }
 
   #p2>span:hover {
@@ -1167,10 +1199,10 @@ section {
 
   .bar_reviews {
     position: absolute;
-    top: 33%;
-    right: 5%;
+    top: 70%;
+    left: 5%;
     width: 30%;
-    height: 25%;
+    height: 30%;
     font-size: 1.2em;
   }
 
@@ -1514,7 +1546,9 @@ section {
 
   .price img {
     position: absolute;
-    right: 0%;
+    top:3%;
+    right:10%;
+    z-index:-1;
     width: 256px;
     height: 256px;
   }
@@ -1522,7 +1556,7 @@ section {
   .price .tac {
     font-size: 2em;
     background-color: #ffd1ff;
-    width: 20%;
+    width: 160px;
     transform: rotate(-15deg);
   }
 
@@ -1685,6 +1719,7 @@ section {
   #p2 img {
     width: 45%;
     height: 100%;
+    object-fit:cover;
   }
 
   .img img {
@@ -1696,7 +1731,7 @@ section {
     font-size: 15em;
     position: absolute;
     top: 7%;
-    left: 38%;
+    right: 38%;
   }
 
   #p2>h3 {

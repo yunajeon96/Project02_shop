@@ -148,7 +148,3 @@ $(function(){
   })
 })
 
-//별점
-// const drawStar=(target)=>{
-//   $('.star span').css({width:'${target.value*10}%'});
-// }
