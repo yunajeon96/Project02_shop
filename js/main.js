@@ -1,3 +1,6 @@
+// $(window).resize(function(){document.location.reload();})
+
+
 
 $(document).ready(function () {
     $('i').click(function () {

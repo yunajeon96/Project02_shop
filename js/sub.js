@@ -1,3 +1,9 @@
+$(document).ready(function () {
+  $('i').click(function () {
+      $('.main_list').toggleClass("toggle");
+  });
+});
+
 //js/dot.js
 $(function () {
   var dot = $("#dot ul li");
@@ -137,6 +143,8 @@ $(function () {
   });
 });
 
+
+//리뷰 페이지 넘기기
 $(function(){
   $(".next").click(function(){
     $(".t2").fadeIn()
