@@ -17,8 +17,10 @@
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/common.css">
+    <script src="js/main.js"></script>
 
 </head>
 
@@ -30,52 +32,52 @@
             <img src="img/logo22.png" alt="logo">
             <nav>
                 <ul class="main_list">
-                    <li><a href="#">BODY</a></li>
-                    <li><a href="#">HAIR</a></li>
-                    <li><a href="#">FACE</a></li>
+                    <li><a href="sub2.html">BODY</a></li>
+                    <li><a href="sub2.html">HAIR</a></li>
+                    <li><a href="sub2.html">FACE</a></li>
                     <li class="logo" style="width:12%"></li>
-                    <li><a href="#">PERFUME</a></li>
-                    <li><a href="#">CANDLE</a></li>
-                    <li><a href="#">SEARCH</a></li>
+                    <li><a href="sub2.html">PERFUME</a></li>
+                    <li><a href="sub2.html">CANDLE</a></li>
+                    <li><a href="sub2.html">SEARCH</a></li>
                 </ul>
 
                 <div class="sub_list">
                     <ul>
-                        <li><a href="#">SHOWER GEL</a></li>
-                        <li><a href="#">SHOWER BAR</a></li>
-                        <li><a href="#">SOAP</a></li>
-                        <li><a href="#">BATH BOMB</a></li>
+                        <li><a href="sub2.html">SHOWER GEL</a></li>
+                        <li><a href="sub2.html">SHOWER BAR</a></li>
+                        <li><a href="sub2.html">SOAP</a></li>
+                        <li><a href="sub2.html">BATH BOMB</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#">SHAMPOO BAR</a></li>
-                        <li><a href="#">CONDITION SPRAY</a></li>
-                        <li><a href="#">SCALP TREATMENT</a></li>
-                        <li><a href="#">HAIR STYLING</a></li>
+                        <li><a href="sub2.html">SHAMPOO BAR</a></li>
+                        <li><a href="sub2.html">CONDITION SPRAY</a></li>
+                        <li><a href="sub2.html">SCALP TREATMENT</a></li>
+                        <li><a href="sub2.html">HAIR STYLING</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#">FACE MASK</a></li>
-                        <li><a href="#">TONER WATER</a></li>
-                        <li><a href="#">MOISTURISER</a></li>
-                        <li><a href="#">CLEANSER</a></li>
+                        <li><a href="sub2.html">FACE MASK</a></li>
+                        <li><a href="sub2.html">TONER WATER</a></li>
+                        <li><a href="sub2.html">MOISTURISER</a></li>
+                        <li><a href="sub2.html">CLEANSER</a></li>
                     </ul>
                     <ul class="logo">
                     </ul>
                     <ul>
-                        <li><a href="#">PURPUME</a></li>
-                        <li><a href="#">BODY SPRAY</a></li>
-                        <li><a href="#">GIFT</a></li>
+                        <li><a href="sub2.html">PURPUME</a></li>
+                        <li><a href="sub2.html">BODY SPRAY</a></li>
+                        <li><a href="sub2.html">GIFT</a></li>
 
                     </ul>
                     <ul>
-                        <li><a href="#">CANDLE</a></li>
-                        <li><a href="#">SCENTED CANDLE</a></li>
+                        <li><a href="sub2.html">CANDLE</a></li>
+                        <li><a href="sub2.html">SCENTED CANDLE</a></li>
 
 
                     </ul>
                     <ul>
-                        <li><a href="#">BEST SELLER</a></li>
-                        <li><a href="#">NEW PRODUCTS</a></li>
-                        <li><a href="#">EVENT</a></li>
+                        <li><a href="sub2.html">BEST SELLER</a></li>
+                        <li><a href="sub2.html">NEW PRODUCTS</a></li>
+                        <li><a href="sub2.html">EVENT</a></li>
 
                     </ul>
                 </div>
@@ -184,110 +186,6 @@
         </div>
 
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-            $('i').click(function () {
-                $('.main_list').toggleClass("toggle");
-            });
-        });
-
-        // let imgs=["img/sec21.png","img/sec22.png","img/sec23.png","img/sec24.png","img/sec25.png"]
-        // let hover=["img/sec21_1.png","img/sec21_2.png","img/sec21_3.png","img/sec21_4.png","img/sec21_5.png"];
-
-        // $(".slide img").hover(function(){
-        //     let i=$(this).parent().index();
-        //     console.log(i);
-        //     $(this).attr("src",hover[i])
-        // },function(){
-        //     let i=$(this).parent().index();
-        //     $(this).attr("src",imgs[i])
-        // });
-
-        function call() {
-            if (window.matchMedia("(min-width: 1440px)").matches) {
-
-                $('.prev').click(function () {
-                    $('.slide li:last').prependTo('.slide');
-                    $('.slide').css('margin-left', "-360px");
-                    $('.slide').stop().animate({ marginLeft: 0 }, 500);
-                });
-                $('.next').click(function () {
-                    $('.slide').stop().animate({ marginLeft: "-360px" }, 500, function () {
-                        $('.slide li:first').appendTo('.slide');
-                        $('.slide').css({ marginLeft: 0 });
-                    })
-                })
-
-            } else {
-                let w = $('.slide li:first').outerWidth(true)
-                console.log(w)
-                $('.prev').click(function () {
-                    $('.slide li:last').prependTo('.slide');
-                    $('.slide').css('margin-left', -w);
-                    $('.slide').stop().animate({ marginLeft: 0 }, 500);
-                });
-                $('.next').click(function () {
-                    $('.slide').stop().animate({ marginLeft: -w }, 500, function () {
-                        $('.slide li:first').appendTo('.slide');
-                        $('.slide').css({ marginLeft: 0 });
-                    })
-                })
-
-            }
-
-            if (window.matchMedia("(max-width: 600px)").matches) {
-                $(".logo").remove()
-            }
-        }
-
-        call();
-        $(window).resize(function () {
-            call();
-        });
-
-        $(function () {
-            $("#section_a>h1").fadeIn(5000);
-        });
-
-
-        $(function () {
-
-            $(window).scroll(function () {
-                let ws = $(this).scrollTop();
-                let a = $("#section_a").offset().top;
-                let b=$("#section_b").offset().top;
-                let c=$("#section_c").offset().top;
-                console.log(c);
-                let d=$("#section_d").offset().top;
-                console.log(d);
-                  
-                if (ws >= a - 700) {
-                    $('.s1').css("transform", "translateY(0px)").css("opacity", "1");
-                }
-
-                if (ws >= a -700) {
-                    $('.seca p').css("transform", "translateY(0px)").css("opacity", "1");
-
-                    $('.seca h6').css("transform", "translateY(0px)").css("opacity", "1");
-                }
-
-                if (ws >= b - 1000) {
-                    $('.slidewrap h2,h5').css("transform", "translateX(0px)").css("opacity", "1");
-                }
-
-                if (ws >= c - 2000) {
-                    $('.secc_text').css("transform", "translateX(0px)").css("opacity", "1");
-                }
-
-                if (ws >= d - 3700) {
-                    $('#section_d h2').css("transform", "translateY(0px)").css("opacity", "1");
-                }
-            })
-        })
-    </script>
 
 </body>
 
