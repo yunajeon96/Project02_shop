@@ -35,7 +35,7 @@ ol {
 }
 
 body {
-  height: 100%;
+  /* height: 100%; */
   overflow-y: hidden;
   font-size: 10px;
 }
@@ -72,6 +72,7 @@ a {
   left: 0;
   z-index: 20;
 }
+
 
 /*오른쪽 버튼*/
 #dot {
@@ -135,7 +136,7 @@ section {
 /*페이지*/
 .page {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   margin: 0 auto;
 }
@@ -144,7 +145,7 @@ section {
 
 #particles-js {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 
@@ -569,7 +570,7 @@ section {
   /* p2 */
   #p2 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
 
@@ -580,7 +581,7 @@ section {
   #p2 h1 {
     font-size: 10em;
     position: absolute;
-    top: 7%;
+    top: 10%;
     left: 7%;
   }
 
@@ -1140,7 +1141,7 @@ section {
 /* p2 */
 #p2 {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   overflow:hidden;
 }
@@ -1520,15 +1521,16 @@ tr:nth-of-type(6) td {
   #p1 {
     position: relative;
     overflow: hidden;
+    height:100vh;
   }
 
   #p1>.video {
-    width: 95%;
-    height: 95%;
+    width: 80%;
+    height: 70%;
     overflow: hidden;
     position: absolute;
-    top: 3%;
-    left: 2%;
+    top: 18%;
+    right: 5%;
   }
 
 
@@ -1724,7 +1726,7 @@ tr:nth-of-type(6) td {
   /* p2============================== */
   #p2 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     overflow:hidden;
   }
@@ -1910,7 +1912,7 @@ tr:nth-of-type(6) td {
   /*p0*/
   #particles-js {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
   }
@@ -2113,12 +2115,13 @@ tr:nth-of-type(6) td {
   /* #p1============================================= */
   #p1 {
     position: relative;
-    
+    width:100%;
+    height:100vh;
   }
 
   #p1>.video {
     width: 35%;
-    height: 75%;
+    height: 80%;
     overflow: hidden;
     position: absolute;
     top:17%;
@@ -2135,8 +2138,9 @@ tr:nth-of-type(6) td {
     width: 45%;
     height: auto;
     position: absolute;
-    top: 22%;
-    right: 10%;
+    top: 20%;
+    right:5%;
+   
   }
 
   .price img {
@@ -2307,7 +2311,7 @@ tr:nth-of-type(6) td {
   /* p2 */
   #p2 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
 
