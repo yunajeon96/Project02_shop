@@ -82,7 +82,7 @@ a {
   justify-content: center;
   align-items: center;
   display: flex;
-  bottom: 30%;
+  bottom: 20%;
   right: 0px;
   transform: translatey(0%);
   z-index: 100;
@@ -160,11 +160,12 @@ section {
     justify-content: center;
     align-items: center;
     display: flex;
-    top: 50%;
+    top: 100%;
     right: 0px;
     transform: translateY(-160%);
     z-index: 100;
   }
+
 
 
 
@@ -445,7 +446,7 @@ section {
   .stararea::after {
     width: 10em;
     height:18em;
-    background: url(/img/sub/star_bar.svg) no-repeat;
+    background: url(../img/sub/star_bar.svg) no-repeat;
     background-size: 100%;
     display: block;
     content: "";
@@ -1018,7 +1019,7 @@ section {
   .stararea::after {
     width: 10em;
     height:18em;
-    background: url(/img/sub/star_bar.svg) no-repeat;
+    background: url(../img/sub/star_bar.svg) no-repeat;
     background-size: 100%;
     display: block;
     content: "";
@@ -1602,7 +1603,7 @@ tr:nth-of-type(6) td {
   .stararea::after {
     width: 120px;
     height: 20px;
-    background: url(/img/sub/star_bar.svg) no-repeat;
+    background: url(../img/sub/star_bar.svg) no-repeat;
     background-size: 100%;
     display: block;
     content: "";
