@@ -56,7 +56,7 @@
         display: none;
         width: 100%;
         position: absolute;
-        right: 2%;
+        
         text-align: end;
     }
 
@@ -67,9 +67,16 @@
     .header nav .main_list>li {
         width:100%;
         height:100%;
-        padding:0;
+        padding:2%;
         font-weight: 800;
         background-color: rgba(0, 0, 0, 1);
+        box-sizing:border-box;
+    }
+
+    .header nav .main_list>li.logo{
+        width:0;
+        height:0;
+        padding:0;
     }
 
     nav li a {
