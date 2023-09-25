@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 @font-face {
     font-family: 'SUITE-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
@@ -15,9 +13,7 @@
     font-family: 'SUITE-Regular';
 }
 
-ul,
-li,
-ol {
+ul,li,ol {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -32,20 +28,10 @@ ol {
 
     #wrap .video {
         width: 100%;
-        height: 72vw;
+        height: 100vh;
         overflow: hidden;
         position: relative;
     }
-
-    .video video {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-
 
     #section_a {
         width: 100%;
@@ -56,7 +42,7 @@ ol {
         position: relative;
     }
 
-    #section_a h1 {
+    #section_a .s1 {
         font-size: 8vw;
         position: absolute;
         top: 7%;
@@ -135,12 +121,11 @@ ol {
     .slidewrap h2 {
         font-size: 7vw;
         margin-top:18%;
-      
     }
 
     .slidewrap h5 {
         font-size: 4vw;
-        margin-top:2%
+        margin-top:2%;
     }
 
     .slidewrap .slide {
@@ -188,7 +173,6 @@ ol {
         font-size: 5vw;
         margin:3% 0;
         font-weight:500;
-        
     }
 
     .secc_text h6 {
@@ -215,6 +199,7 @@ ol {
         cursor: pointer;
     }
 
+    
     #section_c .secc {
         width: 100%;
         height: 600px;
@@ -262,7 +247,7 @@ ol {
         margin-left: 41%;
         margin-bottom:15%;
         font-size: 2.5vw;
-        color: white
+        color: white;
     }
 
     #section_d button:hover {
@@ -285,13 +270,13 @@ ol {
         overflow: hidden;
         position: relative;}
 
-    .video video {
+    /* .video video {
         width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
+    } */
 
 
     #section_a {
@@ -440,6 +425,10 @@ ol {
         cursor: pointer;
     }
 
+    
+
+
+
     #section_c .secc {
         width: 980px;
         height: 695px;
@@ -517,41 +506,34 @@ ol {
 
     #wrap .video {
         width: 100%;
-        height: 970px;
+        height: 100vh;
         overflow: hidden;
         position: relative;
     }
 
-    .video video {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-
-
     #section_a {
         width: 1440px;
-        height: 900px;
+        height: 1000px;
         margin: 0 auto;
         position: relative;
     }
 
-    #section_a h1 {
+    #section_a .s1 {
         font-size: 55px;
         text-align: right;
         padding: 80px 10px;
         font-weight:700;
         letter-spacing:3px;
+        transform:translateY(-100px);
+        transition:all 1.5s;
+        opacity:0;
        
     }
-    #section_a .s1{
-        transform:translateY(-10vh);
-        transition:all 3s;
+    /* #section_a .s1{
+        transform:translateY(-100px);
+        transition:all 1.5s;
         opacity:0;
-    }
+    } */
 
     #section_a .seca {
         width: 28%;
@@ -590,8 +572,8 @@ ol {
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
         padding: 20px 0 10px;
-        transform:translateY(7vh);
-        transition:all 3s;
+        transform:translateY(-50px);
+        transition:all 1.5s;
         opacity:0;
       
     }
@@ -602,8 +584,8 @@ ol {
         color: #333;
         width: 300px;
         font-weight:500;
-        transform:translateY(7vh);
-        transition:all 3s;
+        transform:translateY(-50px);
+        transition:all 1.5s;
         opacity:0;
         }
 
@@ -631,8 +613,8 @@ ol {
         font-size: 45px;
         margin-top: 180px;
         font-weight:900;
-        transform:translateX(-4vh);
-        transition:all 3s;
+        transform:translateY(100px);
+        transition:all 1.5s;
         opacity:0;
         font-family: 'Nanum Gothic', sans-serif;
      
@@ -642,8 +624,8 @@ ol {
         font-size: 23px;
         font-weight:600;
         margin:2% 0;
-        transform:translateX(-5vh);
-        transition:all 3s;
+        transform:translateY(100px);
+        transition:all 1.5s;
         opacity:0;
     }
 
@@ -680,10 +662,7 @@ ol {
         text-align: left;
         position: absolute;
         top:150px;
-        z-index: 3;
-        transform:translateX(-22vh);
-        transition:all 5s;
-        opacity:0;
+        z-index: 3;   
     }
 
     .secc_text h2 {
@@ -692,6 +671,9 @@ ol {
         padding: 300px 0 0px;
         font-weight:900;
         font-family: 'Nanum Gothic', sans-serif;
+        /* transform:translateY(-100px);
+        transition:all 3s;
+        opacity:1; */
     }
 
     .secc_text p {
@@ -699,11 +681,17 @@ ol {
         margin: 50px 0 15px;
         box-shadow: inset 0 -15px 0 #a2a4dd;
         font-weight:500;
+        /* transform:translateY(-100px);
+        transition:all 3s;
+        opacity:1; */
     }
 
     .secc_text h6 {
         font-size: 23px;
         font-weight:300;
+        /* transform:translateY(-100px);
+        transition:all 3s;
+        opacity:1; */
     }
 
     .secc_text button {
@@ -712,12 +700,16 @@ ol {
         padding: 15px 25px;
         border-radius: 6px;
         margin: 50px 100px;
+        /* transform:translateY(-100px);
+        transition:all 3s;
+        opacity:1; */
     }
 
     .secc_text button a {
         text-align: center;
         text-decoration: none;
-        color: white;}
+        color: white;
+       }
 
     .secc_text button:hover {
         background-color: #a2a4dd;
@@ -767,14 +759,17 @@ ol {
         font-size: 55px;
         padding-top: 20%;
         font-family: 'Nanum Gothic', sans-serif;
-        transform:translateY(-15vh);
-        transition:all 5s;
+        transform:translateY(100px);
+        transition:all 3s;
         opacity:1;
     }
 
     #section_d p {
         font-size: 20px;
         margin: 30px 0;
+        transform:translateY(100px);
+        transition:all 3s;
+        opacity:1;
        
     }
 
@@ -783,10 +778,11 @@ ol {
         border: none;
         border-radius: 7px;
         padding: 10px 20px;
-      
         font-size: 15px;
         color: white;
-       
+        transform:translateY(100px);
+        transition:all 3s;
+        opacity:1;
     }
 
     #section_d button:hover {
