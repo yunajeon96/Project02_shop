@@ -526,14 +526,7 @@ ul,li,ol {
         letter-spacing:3px;
         transform:translateY(-100px);
         transition:all 1.5s;
-        opacity:0;
-       
-    }
-    /* #section_a .s1{
-        transform:translateY(-100px);
-        transition:all 1.5s;
-        opacity:0;
-    } */
+        opacity:0; }
 
     #section_a .seca {
         width: 28%;
@@ -671,9 +664,9 @@ ul,li,ol {
         padding: 300px 0 0px;
         font-weight:900;
         font-family: 'Nanum Gothic', sans-serif;
-        /* transform:translateY(-100px);
+        transform:translateY(-100px);
         transition:all 3s;
-        opacity:1; */
+        opacity:1;
     }
 
     .secc_text p {
@@ -681,17 +674,17 @@ ul,li,ol {
         margin: 50px 0 15px;
         box-shadow: inset 0 -15px 0 #a2a4dd;
         font-weight:500;
-        /* transform:translateY(-100px);
+        transform:translateY(-100px);
         transition:all 3s;
-        opacity:1; */
+        opacity:1;
     }
 
     .secc_text h6 {
         font-size: 23px;
         font-weight:300;
-        /* transform:translateY(-100px);
+        transform:translateY(-100px);
         transition:all 3s;
-        opacity:1; */
+        opacity:1;
     }
 
     .secc_text button {
@@ -700,9 +693,9 @@ ul,li,ol {
         padding: 15px 25px;
         border-radius: 6px;
         margin: 50px 100px;
-        /* transform:translateY(-100px);
+        transform:translateY(-100px);
         transition:all 3s;
-        opacity:1; */
+        opacity:1;
     }
 
     .secc_text button a {
@@ -770,7 +763,6 @@ ul,li,ol {
         transform:translateY(100px);
         transition:all 3s;
         opacity:1;
-       
     }
 
     #section_d button {
