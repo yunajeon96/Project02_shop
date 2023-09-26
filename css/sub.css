@@ -1586,23 +1586,23 @@ tr:nth-of-type(6) td {
   }
 
   .stararea {
-    width: 120px;
+    width: 11em;
     height: auto;
     position: relative;
   }
 
   .stararea span {
-    width: 20%;
+    width: 11em;
     background-color: yellow;
-    height: 20px;
+    height: 2em;
     display: block;
     position: relative;
     z-index: 1;
   }
 
   .stararea::after {
-    width: 120px;
-    height: 20px;
+    width: 10em;
+    height: 18em;
     background: url(../img/sub/star_bar.svg) no-repeat;
     background-size: 100%;
     display: block;
